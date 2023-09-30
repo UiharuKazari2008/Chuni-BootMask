@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>CHUN</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="site.css">
+    <link rel="stylesheet" href="root.css">
+    <script>
+    // @ts-check
+const initMediaFiles = /** @type {string[]} */ (["C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/HaNaMiNa feat.Nadeshiko  『＂STAR＂T』MV【イロドリミドリ】 [C4Q9Ibuw4So].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/HaNaMiNa feat.Nanase 『Road without Road』MV【イロドリミドリ】 [UgkgVSpeEBA].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/HaNaMiNa『アイジャストロック』MV【イロドリミドリ】 [87wEUgVwcVc].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/【Official】Music Video 「Limits」 ｜ S.S.L. -舞ヶ原シンセ研究会- [U1FsMKK46YE].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/【Official】Music Video 「ONE SAME GOAL」 ｜ 箱部 なる(CV：M・A・O)＆藤堂 陽南袴(CV：八島 さらら)＆天王洲 なずな(CV：山本 彩乃) [_yDx7FvLljc].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/【Official】Music Video 「We Are Us」 ｜ S.S.L. -舞ヶ原シンセ研究会- [CvCdfoDw6DA].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ 『Session High⤴』 アニメーションMV [1QMfcLcH56o].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ 『Still』 アニメーションMV & 第15話 [_6GYFmzKru8].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ サードシーズン 第1話『超Rock The Party』 [7RqA2n_eegY].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ サードシーズン 第2話『アンチェインド・メロディ』 [OnOj7KtEKBc].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ サードシーズン 第3話『愛の言霊』 [94fIYEeHTKM].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ サードシーズン 第4話『ガールズ・アフタヌーン・アポイントメント』 [QMjMNlejMvQ].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ サードシーズン 第5話『プライマリー進化論』 [ZjEWQ5psFzM].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ サードシーズン 第6話『Snow Colored Score』 [7tY0zXzbCAk].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ サードシーズン 第7話『時の過ぎゆくままに』 [-RCPFGKqW6g].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ サードシーズン 第8話『耳ヲ貸スベキ』 [V2pzdUvViog].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ セカンドシーズン 第15話『夏の決心』 [T60A6ZV-AJY].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ セカンドシーズン 第16話『アイ・ジャスト・ロック』 [_EGMoeCq7Oc].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ セカンドシーズン 第17話『君と、この瞬間』 [58GplTM_sE8].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ セカンドシーズン 第18話『ウワサの真相』 [PoEfel2IpEA].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ セカンドシーズン 第19話『いっそセレナーデ』 [uzWm53jHdOg].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ セカンドシーズン 第20話『Everything For A Reason』 [7Fj7IGdmuzs].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ セカンドシーズン 第21話『ハイアー・グラウンド』 [jZq0J5CvxqU].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ セカンドシーズン 第22話『ケ・セラ・セラ奇想曲』 [tRzJHKWG3Hg].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ セカンドシーズン 第23話『ラウダー・ザン・ワーズ』 [XOqtI6Egz2I].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ セカンドシーズン 第24話『Limits』 [j3f32q3fu9k].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ セカンドシーズン 第25話『Blueprint』 [Pytb7BTcrKA].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ セカンドシーズン 第26話『ウェイ・バック・ホーム』 [AWUqvYuBbL0].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ セカンドシーズン 第27話『Starting Over』 [d8GqbP-LRho].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ セカンドシーズン 第28話『Forever and…』 [pcgy-bI-QpM].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ セカンドシーズン 第29話『コトバウタ』 [QAL6-4Uz_1c].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ セカンドシーズン 第30話『フロム・ヒア・トゥ・エターニティ』 [3m4I0rkL3Zw].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ セカンドシーズン 第31話『帰り道』 [DREt_3kGDH4].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ 小仏凪（cv：佐倉薫） 『TRUST』MV [64GsZ6WEE1s].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ 明坂芹菜（cv：新田恵海） 『SPICY SWINGY STYLE』MV [6vN7evrJUHQ].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ 箱部なる（cv：M・A・O） 『-OutsideR：RequieM-』MV [2BOGEgxzX70].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/イロドリミドリ 舞ヶ原高校軽音部 『Agitation！』MV [n5MZnhCVuF4].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/桔梗 小夜曲(CV：原田 彩楓)『MELtin' 17』MV [B8JAybnWCNs].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/芒崎 奏(CV：立花 理香)『Over Heart』MV [Wwatt0HMZSI].mp4", "C:/Users/Yukimi Kazari/Documents/Chun-Page/videos/藤堂 陽南袴(CV：八島 さらら)『Jack the GAME』MV [EE6gH2v2f0I].mp4"]);
+const transitionVideoPath = /** @type {string} */("");
+    const playOnlyOne = /** @type {boolean} */ (false);
+    const loopFirstVideo = /** @type {boolean} */ (false);
+    const hashKey = /** @type {string} */("50551168368a48c42433cd9725504d67");
+    // @ts-ignore
+    const isOBS = !!(window?.obsstudio?.pluginVersion);
+    let isTransition = true; // set true for init on purpose
+
+
+    /**
+     * shuffleArr takes in an array and returns a new array in random order
+     * @template T
+     * @param {T[]} originalArray any array to be shuffled
+     * @return {T[]} shuffled array
+     */
+    function shuffleArr(originalArray) {
+        let a = [...originalArray]
+        let j, x, i;
+        for (i = a.length - 1; i > 0; i--) {
+            j = Math.floor(Math.random() * (i + 1));
+            x = a[i];
+            a[i] = a[j];
+            a[j] = x;
+        }
+        return a;
+    }
+
+    /**
+     * storePlaylistState takes in a playlist and stores it into localstorage
+     * @param {string[]} state
+     * @returns {void}
+     */
+    function storePlaylistState(state) {
+        localStorage.setItem(`playlist-${hashKey}`, JSON.stringify(state));
+    }
+
+    /**
+     * getNewPlaylist creates a newly randomize list of files and stores it in
+     *  localstorage
+     * @returns {string[]} a new playlist
+     */
+    function getNewPlaylist() {
+        const playlist = shuffleArr(initMediaFiles);
+        storePlaylistState(playlist);
+        return playlist;
+    }
+
+    /**
+     * getPlaylist will get the playlist state form localstorage or create a new one
+     * @returns {string[]} current playlist state
+     */
+    function getPlaylist() {
+        let playlist = [];
+        playlist = JSON.parse(localStorage.getItem(`playlist-${hashKey}`) || '[]');
+        if (!playlist?.length || typeof playlist.pop === 'undefined') {
+            playlist = getNewPlaylist();
+        }
+        return playlist;
+    }
+
+    /**
+     * progressPlaylistState removes the last item from the playlist and stores the
+     *  updated version in localstorage
+     * @returns {void}
+     */
+    function progressPlaylistState() {
+        const playlist = getPlaylist();
+        playlist.pop();
+        storePlaylistState(playlist);
+    }
+
+    /**
+     * getNextPlaylistItem returns the next item in the playlist unless it matches
+     *  the last thing played then it moves that item to the end and returns the
+     *  next item after that
+     * @returns {string} the next item in the playlist
+     */
+    function getNextPlaylistItem() {
+        const playlist = getPlaylist();
+        let mediaItem = playlist.pop() || '';
+
+        console.debug({
+            lastPlayed: localStorage.getItem(`lastPlayed-${hashKey}`),
+            mediaItem,
+            wasLastPlayed: localStorage.getItem(`lastPlayed-${hashKey}`) === mediaItem
+        });
+
+        // check if we played this mediaItem last run
+        if (localStorage.getItem(`lastPlayed-${hashKey}`) === mediaItem) {
+            // moves the repeated item to the end so its not skipped entirely
+            storePlaylistState([mediaItem].concat(playlist));
+            mediaItem = getNextPlaylistItem();
+        }
+        return mediaItem;
+    }
+
+    /**
+     * playNext is the core function of this project and handles the loading and
+     *   playing of the alternating video players
+     * @param {HTMLMediaElement} currentPlayer currently playing video player
+     * @param {HTMLMediaElement} nextPlayer the next video player to be played
+     * @returns {void}
+     */
+    function playNext(currentPlayer, nextPlayer) {
+        const currentMp4Source = /** @type {HTMLSourceElement} */(currentPlayer.getElementsByClassName('mp4Source')[0]);
+        const nextMp4Source  =  /** @type {HTMLSourceElement} */(nextPlayer.getElementsByClassName('mp4Source')[0]);
+        const currentVideo = currentMp4Source.getAttribute('src');
+
+        currentPlayer.load();
+        if (currentVideo && currentVideo !== transitionVideoPath) {
+            localStorage.setItem(`lastPlayed-${hashKey}`, currentVideo);
+        }
+
+        let videoSrc = localStorage.getItem(`lastPlayed-${hashKey}`) || '';
+        if (!loopFirstVideo && (!transitionVideoPath || !isTransition)) {
+            videoSrc = getNextPlaylistItem();
+            console.debug(`next video: ${videoSrc}`);
+        }
+
+        // TODO: we can use this opacity to crossfade between mediaFiles
+        currentPlayer.style['z-index'] = 1;
+        currentPlayer.style['opacity'] = '1';
+        nextPlayer.style['z-index'] = 0;
+        nextPlayer.style['opacity'] = '0';
+
+        if (transitionVideoPath && transitionVideoPath !== '' && isTransition) {
+            videoSrc = transitionVideoPath;
+            isTransition = false;
+        } else {
+            isTransition = true;
+        }
+
+        nextMp4Source.src = ''
+        nextMp4Source.removeAttribute('src'); // empty source
+
+
+        if (videoSrc) {
+            nextMp4Source.setAttribute('src', videoSrc);
+            nextPlayer.load();
+        }
+
+        if (playOnlyOne) {
+            // Remove videos after playing once
+            currentPlayer.onended = () => {
+                currentMp4Source.src = '';
+                currentMp4Source.removeAttribute('src');
+                nextMp4Source.src = '';
+                nextMp4Source.removeAttribute('src');
+            };
+        }
+
+
+        /**
+         * handleLoadedData event listener for data to load will play the video on HAVE_CURRENT_DATA
+         * https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/readyState
+         * @returns {void}
+         */
+        function handleLoadedData() {
+            if (currentPlayer.readyState >= 3) {
+                currentPlayer.play();
+                currentPlayer.removeEventListener('loadeddata', handleLoadedData, false);
+            }
+        }
+
+        if (currentPlayer.readyState >= 3) {
+            currentPlayer.play();
+        } else {
+            currentPlayer.addEventListener('loadeddata', handleLoadedData, false);
+        }
+    }
+
+</script>
+</head>
+<body class="en" page="root" mq="pc">
+<div class="Page">
+    <header>
+        <div class="Header">
+            <div class="Header-wrap"><a href="/20210925175504mp_/https://sega.jp/"
+                                        target="_blank" class="Header-wrap-segalogo">SEGA</a></div>
+            <!--<div data-page="root" class="Gnavi">
+                <nav>
+                    <ul class="Gnavi-navi-btns-inner">
+                        <span>Stestefsd</span>
+                    </ul>
+                </nav> &lt;!&ndash;&ndash;&gt;</div>-->
+        </div>
+    </header>
+    <main role="main" data-page="root" class="Main">
+        <div class="MainContents">
+            <div class="MainBg_wrapper">
+                <div class="MainBg">
+                    <div class="MainBg-ink"></div>
+                    <div class="MainBg-ink"></div>
+                    <div class="MainBg-ink"></div>
+                    <div class="MainBg-ink"></div>
+                    <div class="MainBg-ink"></div>
+                    <div class="MainBg-ink"></div>
+                    <div class="MainBg-line"></div>
+                    <div class="MainBg-line"></div>
+                    <div class="MainBg-line"></div>
+                    <div class="MainBg-line"></div>
+                    <div class="MainBg-line"></div>
+                    <div class="MainBg-line"></div>
+                    <div class="MainBg-line"></div>
+                    <div class="MainBg-line"></div>
+                </div>
+            </div>
+            <div class="CharacterCenter">
+                <div class="CharacterHolder">
+                    <div class="CharacterBox">
+                        <div data-el="asset" status="done" class="elAsset CharacterBox-chara chara1"><img
+                                src="chara1.png"
+                                class="elAsset-image"></div>
+                        <div data-el="asset" status="done" class="elAsset CharacterBox-chara chara2"><img
+                                src="chara2.png"
+                                class="elAsset-image"></div>
+                        <div data-el="asset" status="done" class="elAsset CharacterBox-chara chara3"><img
+                                src="chara3.png"
+                                class="elAsset-image"></div>
+                        <div data-el="asset" status="done" class="elAsset CharacterBox-chara chara4"><img
+                                src="chara4.png"
+                                class="elAsset-image"></div>
+                        <div data-el="asset" status="done" class="elAsset CharacterBox-chara chara5"><img
+                                src="chara5.png"
+                                class="elAsset-image"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="PlayerHolder">
+                <div class="PlayerBox animated--grow-out">
+                    <div class="PlayerBox-twitter">
+                        <div class="TwitterBox player">
+                            <div class="videoHolder">
+                                <video id="videoPlayer2" width="100%" height="100%"
+                                       style="z-index: 0; position:absolute; right:0; bottom:0; min-width:100%; min-height:100%;">
+                                    <source src="" class="mp4Source" type="video/mp4" controls="false" />
+                                </video>
+                                <video id="videoPlayer1" width="100%" height="100%"
+                                       style="z-index: 1; position:absolute; right:0; bottom:0; min-width:100%; min-height:100%;">
+                                    <source src="" class="mp4Source" type="video/mp4" controls="false" />
+                                <script>
+                                        // @ts-check
+                                        const [player1, player2] = document.querySelectorAll('video');
+                                        const [mp4Source1] = player1.querySelectorAll('source');
+                                        const [mp4Source2] = player2.querySelectorAll('source');
+
+                                        mp4Source1.addEventListener('error', errorFunction);
+                                        mp4Source1.addEventListener('stalled', errorFunction);
+                                        mp4Source1.addEventListener('suspend', errorFunction);
+                                        mp4Source1.addEventListener('waiting', errorFunction);
+                                        mp4Source2.addEventListener('error', errorFunction);
+                                        mp4Source2.addEventListener('stalled', errorFunction);
+                                        mp4Source2.addEventListener('suspend', errorFunction);
+                                        mp4Source2.addEventListener('waiting', errorFunction);
+
+                                        /**
+                                         * @param {ErrorEvent | Event} event
+                                         */
+                                        function errorFunction(event) {
+                                            const { type, target } = event;
+                                            const videoSrc =
+                                                // @ts-ignore
+                                                /** @type {string} */ (target?.src) || 'UNKNOWN SOURCE FILE ERROR';
+
+                                            switch (type) {
+                                                case 'error':
+                                                    const errorStr = `Error loading: ${videoSrc}`;
+                                                    console.error(errorStr);
+                                                    if (isOBS) break;
+
+                                                    const errorText = document.createTextNode(errorStr);
+                                                    const error = document.createElement('h1');
+                                                    error.setAttribute('id', 'error');
+                                                    error.appendChild(errorText);
+                                                    document.body.innerHTML = '';
+                                                    document.body.appendChild(error);
+                                                    break;
+                                                case 'stalled':
+                                                case 'suspended':
+                                                case 'waiting':
+                                                default:
+                                                    console.error(`Error loading: [TYPE: ${type}] ${videoSrc}`);
+                                            }
+                                        }
+
+                                        if (!isOBS) {
+                                            player1.setAttribute('controls', 'true');
+                                            player2.setAttribute('controls', 'true');
+                                        }
+
+                                        player1.addEventListener(
+                                            'ended',
+                                            () => {
+                                                if (!loopFirstVideo) {
+                                                    progressPlaylistState();
+                                                }
+                                                playNext(player2, player1);
+                                            },
+                                            {
+                                                passive: true,
+                                            },
+                                        );
+                                        player2.addEventListener(
+                                            'ended',
+                                            () => {
+                                                if (!loopFirstVideo) {
+                                                    progressPlaylistState();
+                                                }
+                                                playNext(player1, player2);
+                                            },
+                                            {
+                                                passive: true,
+                                            },
+                                        );
+
+                                        /***** Initial load *****/
+
+                                        const mp4Source = player1.getElementsByClassName('mp4Source')[0];
+                                        let video = getNextPlaylistItem();
+                                        // have to move the state forward after getting the first video
+                                        progressPlaylistState();
+
+                                        mp4Source.setAttribute('src', video);
+
+                                        playNext(player1, player2);
+
+                                    </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+</body>
+</html>

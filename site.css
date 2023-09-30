@@ -1,0 +1,7300 @@
+/*! ©SEGA */
+@charset "UTF-8";
+*, :after, :before {
+    box-sizing: border-box
+}
+
+:after, :before, a, abbr, address, article, aside, audio, b, blockquote, body, button, canvas, caption, cite, code, data, dd, del, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, html, i, iframe, img, input, ins, kbd, keygen, label, legend, li, main, mark, nav, object, ol, option, output, p, pre, q, rb, rp, rt, ruby, s, samp, section, select, small, span, strong, sub, summary, sup, table, tbody, td, textarea, tfoot, th, thead, time, tr, u, ul, var, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    color: inherit;
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
+    font-style: inherit;
+    line-height: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+    text-align: inherit;
+    text-indent: 0;
+    tab-size: 4
+}
+
+html {
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.2
+}
+
+body, html {
+    min-height: 100%
+}
+
+.hidden, [hidden], datalist, template {
+    display: none !important
+}
+
+details, hr, main, summary {
+    display: block
+}
+
+@media screen {
+    [no-screen] {
+        display: none !important
+    }
+}
+
+@media print {
+    [no-print] {
+        display: none !important
+    }
+}
+
+audio:not([controls]) {
+    display: none
+}
+
+html.ie11 wbr:after {
+    content: "\00200B"
+}
+
+hr {
+    height: 1px;
+    border: 0;
+    padding: 0;
+    margin: 1em 0;
+    background-color: #ddd
+}
+
+pre {
+    white-space: pre-wrap
+}
+
+ul, ul > li {
+    list-style: none
+}
+
+ol, ol > li {
+    list-style: decimal
+}
+
+ol {
+    padding-left: 3ex
+}
+
+button, input, optgroup, option, select, textarea {
+    font-family: inherit;
+    color: inherit
+}
+
+optgroup, strong {
+    font-weight: 700
+}
+
+optgroup > option {
+    font-weight: 400
+}
+
+input[type=mail], input[type=password], input[type=tel], input[type=text], textarea {
+    -webkit-appearance: none;
+    appearance: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    border-radius: 0;
+    cursor: auto
+}
+
+button, input[type=button], input[type=reset], input[type=submit], label {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-appearance: none;
+    appearance: none;
+    touch-action: manipulation;
+    font-weight: 400;
+    vertical-align: middle;
+    border-radius: 0;
+    cursor: pointer
+}
+
+:disabled, button:disabled, input:disabled, optgroup:disabled, option:disabled, select:disabled, textarea:disabled {
+    cursor: default
+}
+
+button, input[type=button], input[type=reset], input[type=submit] {
+    text-align: center;
+    white-space: nowrap
+}
+
+input[type=search] {
+    -webkit-appearance: none;
+    appearance: none
+}
+
+input[type=date], input[type=tel], input[type=time] {
+    min-height: 1em;
+    line-height: 1
+}
+
+input[type=date], input[type=time] {
+    min-width: 5ex
+}
+
+input[type=tel] {
+    min-width: 13ex
+}
+
+select {
+    vertical-align: middle;
+    cursor: pointer
+}
+
+:-moz-input-placeholder, :-ms-input-placeholder, ::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, .25);
+    line-height: 1.2
+}
+
+table {
+    width: 100%;
+    max-width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    empty-cells: show;
+    caption-side: top
+}
+
+td, th, tr {
+    vertical-align: middle;
+    word-wrap: break-word;
+    overflow-wrap: break-word
+}
+
+canvas, img, svg, video {
+    max-width: 100%;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+canvas, iframe, img, svg, video {
+    vertical-align: middle
+}
+
+del {
+    opacity: .5;
+    text-decoration: line-through
+}
+
+small {
+    font-size: 80%
+}
+
+sub, sup {
+    font-size: 75%;
+    line-height: 0
+}
+
+sup {
+    vertical-align: .3em
+}
+
+sub {
+    vertical-align: -.2em
+}
+
+code, pre {
+    font-family: monospace
+}
+
+.elAsset {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    margin: auto
+}
+
+.elAsset, .elAsset-image {
+    width: 100%
+}
+
+.elAsset-image.lazy {
+    animation: elAssetLazyFadein .4s cubic-bezier(.75, 0, .35, .66)
+}
+
+@keyframes elAssetLazyFadein {
+    0% {
+        opacity: 0
+    }
+    to {
+        opacity: 1
+    }
+}
+
+.this-file {
+    content: "zero-components/el-asset/style.scss"
+}
+
+.elAssetLazy {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center
+}
+
+.elAssetLazy > * {
+    position: relative;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 2px;
+    height: 20px
+}
+
+.elAssetLazy > :before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    background-color: hsla(0, 0%, 53%, .7);
+    border-radius: 4px;
+    animation: elAssetLazy 1s infinite
+}
+
+.elAssetLazy > :first-child::before {
+    animation-delay: .1s
+}
+
+.elAssetLazy > :nth-child(2):before {
+    animation-delay: .2s
+}
+
+.elAssetLazy > :nth-child(3):before {
+    animation-delay: .3s
+}
+
+.elAssetLazy > :nth-child(4):before {
+    animation-delay: .4s
+}
+
+@keyframes elAssetLazy {
+    0% {
+        height: 8px;
+        opacity: .2;
+        transform: scale(.8)
+    }
+    20% {
+        height: 8px;
+        opacity: .5;
+        transform: scale(1)
+    }
+    70% {
+        height: 14px;
+        opacity: 1;
+        transform: scale(1)
+    }
+    to {
+        height: 8px;
+        opacity: .2;
+        transform: scale(.8)
+    }
+}
+
+.this-file {
+    content: "zero-components/el-asset-lazy/style.scss"
+}
+
+.elCarousel, .elCarousel-body {
+    position: relative
+}
+
+.elCarousel-body {
+    height: 200px;
+    margin: 0 auto
+}
+
+.elCarousel-torso {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    overflow: hidden
+}
+
+.elCarousel-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transition: .5s
+}
+
+.elCarousel-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: 50%
+}
+
+.elCarousel-caption {
+    position: absolute;
+    white-space: normal
+}
+
+.elCarousel-indicators {
+    position: absolute;
+    width: 100%
+}
+
+.elCarousel-indicator, .elCarousel-indicators {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.elCarousel-btn, .elCarousel-indicator {
+    color: transparent;
+    font-size: 0
+}
+
+.elCarousel-btn {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.elCarousel-prev {
+    right: 100%
+}
+
+.elCarousel-next {
+    left: 100%
+}
+
+.this-file {
+    content: "zero-components/el-carousel/style.scss"
+}
+
+.elDialogBody {
+    overflow: hidden
+}
+
+.elDialog {
+    position: relative;
+    width: 100%;
+    z-index: 99997;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.elDialog-shade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99998;
+    pointer-events: all
+}
+
+.elDialog-shade-closing {
+    pointer-events: none
+}
+
+.elDialog-boxWrapper {
+    position: relative;
+    z-index: 99999;
+    pointer-events: none
+}
+
+.elDialog-box, .elDialog-close {
+    pointer-events: all
+}
+
+.elDialog-vanilla {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.elDialog-vanilla-close {
+    position: absolute;
+    bottom: 100%;
+    right: 0
+}
+
+.elDialog-vanilla-shade {
+    width: 400vw;
+    background-color: rgba(0, 0, 0, .75);
+    background-image: linear-gradient(90deg, transparent 6px, rgba(0, 0, 0, .1) 0);
+    background-size: 8px 100%;
+    transform: translateX(-25%) skew(-45deg)
+}
+
+.elDialog-vanilla-boxWrapper {
+    perspective: 500px
+}
+
+.elDialog-vanilla-box, .elDialog-vanilla-content {
+    height: auto;
+    max-height: calc(100vh - 200px);
+    margin: 100px auto
+}
+
+.elDialog-vanilla-box {
+    position: relative;
+    width: 800px;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2), 0 40px 40px -20px rgba(0, 0, 0, .2)
+}
+
+.elDialog-vanilla-content {
+    padding: 40px;
+    overflow-y: scroll
+}
+
+.elDialog-vanilla-content::-webkit-scrollbar {
+    width: 8px;
+    background-color: #fff
+}
+
+.elDialog-vanilla-content::-webkit-scrollbar-thumb {
+    background-color: #ccc
+}
+
+.elDialog-vanilla-shade-enter-active {
+    transition: .4s ease-out
+}
+
+.elDialog-vanilla-shade-leave-active {
+    transition: .4s
+}
+
+.elDialog-vanilla-shade-enter, .elDialog-vanilla-shade-leave-to {
+    opacity: 0
+}
+
+.elDialog-vanilla-box-enter-active, .elDialog-vanilla-box-leave-active {
+    transition: .5s
+}
+
+.elDialog-vanilla-box-enter {
+    transform-origin: 50% 20%;
+    transform: translate3d(0, 10px, 0) rotateX(10deg) scale(1.1);
+    opacity: 0
+}
+
+.elDialog-vanilla-box-leave-to {
+    transform-origin: 50% 80%;
+    transform: translate3d(0, -10px, 0) rotateX(-10deg) scale(1.1);
+    opacity: 0
+}
+
+.elDialog-relative {
+    position: relative;
+    border: 2px solid red
+}
+
+.elDialog-relative-close {
+    position: absolute;
+    bottom: 100%;
+    right: 0
+}
+
+.elDialog-relative-shade {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .75);
+    background-image: linear-gradient(90deg, transparent 6px, rgba(0, 0, 0, .1) 0);
+    background-size: 8px 100%;
+    transform: translateX(-25%) skew(-45deg)
+}
+
+.elDialog-relative-boxWrapper {
+    perspective: 500px
+}
+
+.elDialog-relative-box {
+    position: relative;
+    background-color: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2), 0 40px 40px -20px rgba(0, 0, 0, .2)
+}
+
+.elDialog-relative-box::-webkit-scrollbar {
+    width: 8px;
+    background-color: #fff
+}
+
+.elDialog-relative-box::-webkit-scrollbar-thumb {
+    background-color: #ccc
+}
+
+.elDialog-relative-content {
+    padding: 40px
+}
+
+.elDialog-relative-shade-enter-active {
+    transition: .4s ease-out
+}
+
+.elDialog-relative-shade-leave-active {
+    transition: .4s
+}
+
+.elDialog-relative-shade-enter, .elDialog-relative-shade-leave-to {
+    opacity: 0
+}
+
+.elDialog-relative-box-enter-active, .elDialog-relative-box-leave-active {
+    transition: .5s
+}
+
+.elDialog-relative-box-enter {
+    transform: scale(1.01);
+    opacity: 0
+}
+
+.elDialog-relative-box-leave-to {
+    transform: scale(.99);
+    opacity: 0
+}
+
+.elDialog-spicy {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%
+}
+
+.elDialog-spicy-shade {
+    width: 200%;
+    background-color: rgba(0, 51, 0, .75);
+    background-image: radial-gradient(rgba(34, 34, 34, .3) 3px, transparent 4px), radial-gradient(rgba(34, 34, 34, .2) 5px, transparent 6px);
+    background-position: 0 0, 10px 10px;
+    background-size: 20px 20px;
+    animation: 3s spicyDialog infinite
+}
+
+@keyframes spicyDialog {
+    0% {
+        background-position: 0 0, 10px 10px
+    }
+    25% {
+        background-position: 10px 0, 0 10px
+    }
+    50% {
+        background-position: 10px 10px, 0 0
+    }
+    75% {
+        background-position: 0 10px, 10px 0
+    }
+    to {
+        background-position: 0 0, 10px 10px
+    }
+}
+
+.elDialog-spicy-box, .elDialog-spicy-content {
+    height: auto;
+    max-height: calc(100vh - 200px);
+    margin: 100px auto
+}
+
+.elDialog-spicy-box {
+    position: relative;
+    background-color: #fff;
+    margin: 100px auto;
+    color: #353;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .2), 0 40px 40px -20px rgba(0, 0, 0, .2)
+}
+
+.elDialog-spicy-content {
+    padding: 40px;
+    overflow-y: scroll
+}
+
+.elDialog-spicy-shade-enter-active {
+    transition: .4s ease-out
+}
+
+.elDialog-spicy-shade-leave-active {
+    transition: .4s
+}
+
+.elDialog-spicy-shade-enter, .elDialog-spicy-shade-leave-to {
+    opacity: 0
+}
+
+.elDialog-spicy-box-enter-active {
+    transition: .3s cubic-bezier(.3, .3, .6, 1.2)
+}
+
+.elDialog-spicy-box-leave-active {
+    transition: .5s cubic-bezier(.3, .3, .8, 2.4)
+}
+
+.elDialog-spicy-box-enter {
+    transform: scale(1.3, .9);
+    opacity: 0
+}
+
+.elDialog-spicy-box-leave-to {
+    transform: scale(1.2);
+    opacity: 0
+}
+
+.this-file {
+    content: "zero-components/el-dialog/style.scss";
+    content: "zero-components/el-following/style.scss"
+}
+
+.elKamishibaiPadding {
+    position: relative;
+    display: block;
+    width: 100%
+}
+
+.elKamishibaiBook {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%
+}
+
+.elKamishibaiPage {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden
+}
+
+.this-file {
+    content: "zero-components/el-kamishibai/style.scss";
+    content: "zero-components/el-local-link/style.scss"
+}
+
+.VanillaMd {
+    background-color: #fff;
+    border: 1px solid #444;
+    color: #555;
+    padding: 20px;
+    font-size: 16px;
+    line-height: 1.5
+}
+
+.VanillaMd:after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.VanillaMd .heading {
+    clear: both
+}
+
+.VanillaMd, .VanillaMd * .VanillaMd :before, .VanillaMd :after {
+    box-sizing: border-box
+}
+
+.VanillaMd .heading {
+    font-weight: 600;
+    line-height: 1.25;
+    margin-top: 20px;
+    margin-bottom: 10px
+}
+
+.VanillaMd h1 {
+    padding-bottom: 3px;
+    font-size: 32px;
+    color: #222
+}
+
+.VanillaMd h1, .VanillaMd h2 {
+    border-bottom: 1px solid #eaecef
+}
+
+.VanillaMd h2 {
+    padding-bottom: 2px;
+    font-size: 24px;
+    color: #333
+}
+
+.VanillaMd h3 {
+    padding-bottom: 1px;
+    font-size: 18px;
+    color: #444
+}
+
+.VanillaMd p {
+    margin: 10px 0;
+    line-height: 1.2
+}
+
+.VanillaMd pre {
+    font-family: monospace;
+    padding: 16px;
+    overflow: auto;
+    font-size: 14px;
+    line-height: 1.45;
+    background-color: #393b3e;
+    margin: 20px 10px;
+    color: #eee
+}
+
+.VanillaMd pre .url {
+    color: #26dee8
+}
+
+.VanillaMd blockquote {
+    padding: 0 10px;
+    color: #6a737d;
+    border-left: 2px solid #eee
+}
+
+.VanillaMd table {
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    line-height: 1.35;
+    font-size: 14px
+}
+
+.VanillaMd td, .VanillaMd th {
+    border: 1px solid #ccc;
+    padding: 2px 4px
+}
+
+.VanillaMd-td-left {
+    text-align: left
+}
+
+.VanillaMd-td-center {
+    text-align: center
+}
+
+.VanillaMd-td-right {
+    text-align: right
+}
+
+.VanillaMd dl {
+    margin: 1em
+}
+
+.VanillaMd dt {
+    font-weight: 700
+}
+
+.VanillaMd dd {
+    margin: 0 1em
+}
+
+.VanillaMd code {
+    display: inline-block;
+    padding: 2px 4px;
+    margin: 0 3px;
+    font-size: 14px;
+    background-color: #eee;
+    color: #555;
+    border-radius: 2px;
+    line-height: 1.2
+}
+
+.VanillaMd code:first-child {
+    margin-left: 0
+}
+
+.VanillaMd b {
+    font-weight: 600
+}
+
+.VanillaMd strong {
+    padding: 0 2px;
+    font-weight: 800;
+    color: #d21212;
+    background-image: linear-gradient(transparent 60%, #f5becb 0, #f5becb 90%, transparent 0)
+}
+
+.VanillaMd .marker {
+    padding: 0 2px;
+    margin: 0 2px;
+    font-weight: 800;
+    color: #f14a92;
+    background-image: linear-gradient(transparent 35%, rgba(241, 74, 146, .35) 45%, rgba(241, 74, 146, .35) 80%, transparent 90%)
+}
+
+.VanillaMd .name {
+    margin: 0 -.8ex;
+    font-weight: 800;
+    color: #222
+}
+
+.VanillaMd .kakko {
+    margin: 0 -.5ex;
+    font-size: 14px
+}
+
+.VanillaMd .imagebox2, .VanillaMd .imagebox3, .VanillaMd .imagebox4, .VanillaMd .imagebox5 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.VanillaMd .imagebox2:after, .VanillaMd .imagebox3:after, .VanillaMd .imagebox4:after, .VanillaMd .imagebox5:after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+@media screen and (min-width: 601px) {
+    .VanillaMd .imagebox2 > * {
+        display: block !important;
+        max-width: calc((100% - 10px) / 2);
+        margin: 5px !important
+    }
+
+    .VanillaMd .imagebox2 > :nth-child(odd) {
+        margin-left: 0 !important
+    }
+
+    .VanillaMd .imagebox2 > :nth-child(2n+2) {
+        margin-right: 0 !important
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .VanillaMd .imagebox2 > * {
+        display: block !important;
+        max-width: calc((100% - 0px) / 1);
+        margin: 2.5px !important
+    }
+
+    .VanillaMd .imagebox2 > :nth-child(1n+1) {
+        margin-left: 0 !important;
+        margin-right: 0 !important
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .VanillaMd .imagebox3 > * {
+        display: block !important;
+        max-width: calc((100% - 20px) / 3);
+        margin: 5px !important
+    }
+
+    .VanillaMd .imagebox3 > :nth-child(3n+1) {
+        margin-left: 0 !important
+    }
+
+    .VanillaMd .imagebox3 > :nth-child(3n+3) {
+        margin-right: 0 !important
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .VanillaMd .imagebox3 > * {
+        display: block !important;
+        max-width: calc((100% - 5px) / 2);
+        margin: 2.5px !important
+    }
+
+    .VanillaMd .imagebox3 > :nth-child(odd) {
+        margin-left: 0 !important
+    }
+
+    .VanillaMd .imagebox3 > :nth-child(2n+2) {
+        margin-right: 0 !important
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .VanillaMd .imagebox4 > * {
+        display: block !important;
+        max-width: calc((100% - 30px) / 4);
+        margin: 5px !important
+    }
+
+    .VanillaMd .imagebox4 > :nth-child(4n+1) {
+        margin-left: 0 !important
+    }
+
+    .VanillaMd .imagebox4 > :nth-child(4n+4) {
+        margin-right: 0 !important
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .VanillaMd .imagebox4 > * {
+        display: block !important;
+        max-width: calc((100% - 10px) / 3);
+        margin: 2.5px !important
+    }
+
+    .VanillaMd .imagebox4 > :nth-child(3n+1) {
+        margin-left: 0 !important
+    }
+
+    .VanillaMd .imagebox4 > :nth-child(3n+3) {
+        margin-right: 0 !important
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .VanillaMd .imagebox5 > * {
+        display: block !important;
+        max-width: calc((100% - 40px) / 5);
+        margin: 5px !important
+    }
+
+    .VanillaMd .imagebox5 > :nth-child(5n+1) {
+        margin-left: 0 !important
+    }
+
+    .VanillaMd .imagebox5 > :nth-child(5n+5) {
+        margin-right: 0 !important
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .VanillaMd .imagebox5 > * {
+        display: block !important;
+        max-width: calc((100% - 15px) / 4);
+        margin: 2.5px !important
+    }
+
+    .VanillaMd .imagebox5 > :nth-child(4n+1) {
+        margin-left: 0 !important
+    }
+
+    .VanillaMd .imagebox5 > :nth-child(4n+4) {
+        margin-right: 0 !important
+    }
+}
+
+.VanillaMd .img {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    border: 1px solid #e3e3e3;
+    padding: 2px;
+    background-color: #fcfcfc;
+    margin: 5px auto
+}
+
+.VanillaMd .img > img {
+    max-height: 100%
+}
+
+.VanillaMd .img-caption {
+    display: none
+}
+
+.VanillaMd .img.left {
+    clear: left;
+    float: left;
+    margin-right: 10px
+}
+
+.VanillaMd .img.right {
+    clear: right;
+    float: right;
+    margin-left: 10px
+}
+
+.VanillaMd .blockImage {
+    text-align: center
+}
+
+.VanillaMd-blockImage.VanillaMd-left {
+    text-align: left
+}
+
+.VanillaMd-blockImage.VanillaMd-right {
+    text-align: right
+}
+
+.VanillaMd img {
+    display: block;
+    max-width: 100%
+}
+
+.VanillaMd .center {
+    margin: 0 auto
+}
+
+.VanillaMd del {
+    opacity: .5;
+    color: #888
+}
+
+.VanillaMd ol, .VanillaMd ul {
+    margin: 0;
+    padding: 0;
+    padding-left: 2em
+}
+
+.VanillaMd > .ol, .VanillaMd > .ul {
+    margin: 10px 0
+}
+
+.VanillaMd .ul {
+    position: relative;
+    list-style: none
+}
+
+.VanillaMd .ul:before {
+    content: "•";
+    position: absolute;
+    width: 2em;
+    margin-left: -2.5em;
+    text-align: right
+}
+
+.VanillaMd .kome {
+    color: #c3342c
+}
+
+.VanillaMd .kome:before {
+    content: "※";
+    margin-left: -2em
+}
+
+.VanillaMd .buttonLink {
+    display: inline-block;
+    padding: 5px 7px;
+    background-color: #069;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none
+}
+
+.VanillaMd .buttonLink:hover {
+    background-color: #08c
+}
+
+.VanillaMd .url {
+    color: #0366d6;
+    word-break: break-all
+}
+
+.VanillaMd .textlink, .VanillaMd .url:hover {
+    text-decoration: underline
+}
+
+.VanillaMd .textlink {
+    color: #0366d6;
+    word-break: break-all
+}
+
+.VanillaMd .textlink:hover {
+    text-decoration: none
+}
+
+.this-file {
+    content: "zero-components/el-markdown/style.scss"
+}
+
+.VanillaPager {
+    position: relative
+}
+
+.VanillaPager-info {
+    position: relative;
+    height: 30px;
+    margin-bottom: 20px;
+    line-height: 30px;
+    text-align: center
+}
+
+.VanillaPager-page {
+    display: inline-block;
+    width: 5ex;
+    text-align: center;
+    background-color: #eee;
+    font-weight: 700;
+    color: #444;
+    box-shadow: 0 0 1px rgba(0, 0, 0, .5)
+}
+
+.VanillaPager-delim {
+    color: #999;
+    margin: 0 1ex
+}
+
+.VanillaPager-navs {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 30px;
+    font-size: 24px
+}
+
+.VanillaPager-btn {
+    position: relative;
+    width: 80px;
+    height: 100%;
+    background-color: #eee;
+    color: #444;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, .5));
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.VanillaPager-btn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    display: block;
+    border-style: solid;
+    border-width: 15px 10px;
+    border-color: transparent;
+    border-right-color: #eee
+}
+
+.VanillaPager-btn[disabled] {
+    pointer-events: none;
+    filter: saturate(50%) brightness(100%) contrast(50%) drop-shadow(0 2px 4px rgba(0, 0, 0, .5))
+}
+
+.VanillaPager-btn:hover {
+    filter: brightness(108%) drop-shadow(0 2px 4px rgba(0, 0, 0, .5))
+}
+
+.VanillaPager-btn:active {
+    filter: brightness(100%) drop-shadow(0 1px 2px rgba(0, 0, 0, .5));
+    transform: translateY(1px)
+}
+
+.VanillaPager-prev {
+    float: left;
+    padding-right: 5px;
+    margin-right: 20px
+}
+
+.VanillaPager-prev:before {
+    right: 100%
+}
+
+.VanillaPager-next {
+    float: right;
+    padding-left: 5px;
+    margin-left: 20px
+}
+
+.VanillaPager-next:before {
+    left: 100%;
+    transform: rotate(180deg)
+}
+
+.this-file {
+    content: "zero-components/el-pager/style.scss"
+}
+
+.elSfxObject {
+    position: absolute
+}
+
+.elSfxObject-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+body.debug .elSfxObject-inner {
+    pointer-events: none;
+    outline: 2px dashed rgba(255, 255, 0, .35)
+}
+
+body.debug :hover > .elSfxObject {
+    filter: brightness(75%) grayscale(35%) contrast(70%)
+}
+
+body.debug .elSfxObject:hover {
+    cursor: pointer;
+    filter: brightness(120%)
+}
+
+body.debug .elSfxObject:hover > .elSfxObject-inner {
+    outline: 2px solid #ff0
+}
+
+body.debug .elSfxObject.isGrab {
+    transition: 0s;
+    z-index: 9999
+}
+
+body.debug .elSfxObject.isGrab > .elSfxObject-inner {
+    outline: 2px solid red;
+    filter: brightness(110%);
+    z-index: 9999
+}
+
+.elSfxObject:nth-child(0) {
+    z-index: 100
+}
+
+.elSfxObject:first-child {
+    z-index: 99
+}
+
+.elSfxObject:nth-child(2) {
+    z-index: 98
+}
+
+.elSfxObject:nth-child(3) {
+    z-index: 97
+}
+
+.elSfxObject:nth-child(4) {
+    z-index: 96
+}
+
+.elSfxObject:nth-child(5) {
+    z-index: 95
+}
+
+.elSfxObject:nth-child(6) {
+    z-index: 94
+}
+
+.elSfxObject:nth-child(7) {
+    z-index: 93
+}
+
+.elSfxObject:nth-child(8) {
+    z-index: 92
+}
+
+.elSfxObject:nth-child(9) {
+    z-index: 91
+}
+
+.elSfxObject:nth-child(10) {
+    z-index: 90
+}
+
+.elSfxObject:nth-child(11) {
+    z-index: 89
+}
+
+.elSfxObject:nth-child(12) {
+    z-index: 88
+}
+
+.elSfxObject:nth-child(13) {
+    z-index: 87
+}
+
+.elSfxObject:nth-child(14) {
+    z-index: 86
+}
+
+.elSfxObject:nth-child(15) {
+    z-index: 85
+}
+
+.elSfxObject:nth-child(16) {
+    z-index: 84
+}
+
+.elSfxObject:nth-child(17) {
+    z-index: 83
+}
+
+.elSfxObject:nth-child(18) {
+    z-index: 82
+}
+
+.elSfxObject:nth-child(19) {
+    z-index: 81
+}
+
+.elSfxObject:nth-child(20) {
+    z-index: 80
+}
+
+.elSfxObject:nth-child(21) {
+    z-index: 79
+}
+
+.elSfxObject:nth-child(22) {
+    z-index: 78
+}
+
+.elSfxObject:nth-child(23) {
+    z-index: 77
+}
+
+.elSfxObject:nth-child(24) {
+    z-index: 76
+}
+
+.elSfxObject:nth-child(25) {
+    z-index: 75
+}
+
+.elSfxObject:nth-child(26) {
+    z-index: 74
+}
+
+.elSfxObject:nth-child(27) {
+    z-index: 73
+}
+
+.elSfxObject:nth-child(28) {
+    z-index: 72
+}
+
+.elSfxObject:nth-child(29) {
+    z-index: 71
+}
+
+.elSfxObject:nth-child(30) {
+    z-index: 70
+}
+
+.elSfxObject:nth-child(31) {
+    z-index: 69
+}
+
+.elSfxObject:nth-child(32) {
+    z-index: 68
+}
+
+.elSfxObject:nth-child(33) {
+    z-index: 67
+}
+
+.elSfxObject:nth-child(34) {
+    z-index: 66
+}
+
+.elSfxObject:nth-child(35) {
+    z-index: 65
+}
+
+.elSfxObject:nth-child(36) {
+    z-index: 64
+}
+
+.elSfxObject:nth-child(37) {
+    z-index: 63
+}
+
+.elSfxObject:nth-child(38) {
+    z-index: 62
+}
+
+.elSfxObject:nth-child(39) {
+    z-index: 61
+}
+
+.elSfxObject:nth-child(40) {
+    z-index: 60
+}
+
+.elSfxObject:nth-child(41) {
+    z-index: 59
+}
+
+.elSfxObject:nth-child(42) {
+    z-index: 58
+}
+
+.elSfxObject:nth-child(43) {
+    z-index: 57
+}
+
+.elSfxObject:nth-child(44) {
+    z-index: 56
+}
+
+.elSfxObject:nth-child(45) {
+    z-index: 55
+}
+
+.elSfxObject:nth-child(46) {
+    z-index: 54
+}
+
+.elSfxObject:nth-child(47) {
+    z-index: 53
+}
+
+.elSfxObject:nth-child(48) {
+    z-index: 52
+}
+
+.elSfxObject:nth-child(49) {
+    z-index: 51
+}
+
+.elSfxObject:nth-child(50) {
+    z-index: 50
+}
+
+.elSfxObject:nth-child(51) {
+    z-index: 49
+}
+
+.elSfxObject:nth-child(52) {
+    z-index: 48
+}
+
+.elSfxObject:nth-child(53) {
+    z-index: 47
+}
+
+.elSfxObject:nth-child(54) {
+    z-index: 46
+}
+
+.elSfxObject:nth-child(55) {
+    z-index: 45
+}
+
+.elSfxObject:nth-child(56) {
+    z-index: 44
+}
+
+.elSfxObject:nth-child(57) {
+    z-index: 43
+}
+
+.elSfxObject:nth-child(58) {
+    z-index: 42
+}
+
+.elSfxObject:nth-child(59) {
+    z-index: 41
+}
+
+.elSfxObject:nth-child(60) {
+    z-index: 40
+}
+
+.elSfxObject:nth-child(61) {
+    z-index: 39
+}
+
+.elSfxObject:nth-child(62) {
+    z-index: 38
+}
+
+.elSfxObject:nth-child(63) {
+    z-index: 37
+}
+
+.elSfxObject:nth-child(64) {
+    z-index: 36
+}
+
+.elSfxObject:nth-child(65) {
+    z-index: 35
+}
+
+.elSfxObject:nth-child(66) {
+    z-index: 34
+}
+
+.elSfxObject:nth-child(67) {
+    z-index: 33
+}
+
+.elSfxObject:nth-child(68) {
+    z-index: 32
+}
+
+.elSfxObject:nth-child(69) {
+    z-index: 31
+}
+
+.elSfxObject:nth-child(70) {
+    z-index: 30
+}
+
+.elSfxObject:nth-child(71) {
+    z-index: 29
+}
+
+.elSfxObject:nth-child(72) {
+    z-index: 28
+}
+
+.elSfxObject:nth-child(73) {
+    z-index: 27
+}
+
+.elSfxObject:nth-child(74) {
+    z-index: 26
+}
+
+.elSfxObject:nth-child(75) {
+    z-index: 25
+}
+
+.elSfxObject:nth-child(76) {
+    z-index: 24
+}
+
+.elSfxObject:nth-child(77) {
+    z-index: 23
+}
+
+.elSfxObject:nth-child(78) {
+    z-index: 22
+}
+
+.elSfxObject:nth-child(79) {
+    z-index: 21
+}
+
+.elSfxObject:nth-child(80) {
+    z-index: 20
+}
+
+.elSfxObject:nth-child(81) {
+    z-index: 19
+}
+
+.elSfxObject:nth-child(82) {
+    z-index: 18
+}
+
+.elSfxObject:nth-child(83) {
+    z-index: 17
+}
+
+.elSfxObject:nth-child(84) {
+    z-index: 16
+}
+
+.elSfxObject:nth-child(85) {
+    z-index: 15
+}
+
+.elSfxObject:nth-child(86) {
+    z-index: 14
+}
+
+.elSfxObject:nth-child(87) {
+    z-index: 13
+}
+
+.elSfxObject:nth-child(88) {
+    z-index: 12
+}
+
+.elSfxObject:nth-child(89) {
+    z-index: 11
+}
+
+.elSfxObject:nth-child(90) {
+    z-index: 10
+}
+
+.elSfxObject:nth-child(91) {
+    z-index: 9
+}
+
+.elSfxObject:nth-child(92) {
+    z-index: 8
+}
+
+.elSfxObject:nth-child(93) {
+    z-index: 7
+}
+
+.elSfxObject:nth-child(94) {
+    z-index: 6
+}
+
+.elSfxObject:nth-child(95) {
+    z-index: 5
+}
+
+.elSfxObject:nth-child(96) {
+    z-index: 4
+}
+
+.elSfxObject:nth-child(97) {
+    z-index: 3
+}
+
+.elSfxObject:nth-child(98) {
+    z-index: 2
+}
+
+.elSfxObject:nth-child(99) {
+    z-index: 1
+}
+
+.elSfxObject.isLink {
+    z-index: 200
+}
+
+.elSfxObject.isLink:hover {
+    filter: brightness(110%);
+    cursor: pointer
+}
+
+body.debug .elSfxObject-inner:before {
+    content: attr(data-sfx-object);
+    position: absolute;
+    font-size: 10px;
+    left: -1px;
+    top: -17px;
+    color: #444;
+    background-color: #ccc;
+    padding: 2px
+}
+
+body:not(.debug) .elSfxObject button {
+    display: none
+}
+
+body.debug .elSfxObject button {
+    position: absolute;
+    display: block;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    pointer-events: none
+}
+
+.elSfxObject a {
+    top: 0;
+    color: red;
+    z-index: 50
+}
+
+.elSfxObject-youtube, .elSfxObject a {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+.elSfxObject-youtube {
+    border: 0;
+    z-index: 1
+}
+
+.this-file {
+    content: "zero-components/el-sfx-object/style.scss"
+}
+
+.elSfxScene {
+    position: relative;
+    margin: 0 auto
+}
+
+.elSfxScene-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-position: 50%
+}
+
+.elSfxScene:first-child {
+    margin-top: 0
+}
+
+.elSfxScene:last-child {
+    margin-bottom: 200px
+}
+
+.elSfxScene-content {
+    position: relative;
+    height: 100%;
+    margin: 0 auto
+}
+
+body.debug .elSfxScene-content {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    border: 2px dashed hsla(0, 0%, 53%, .5)
+}
+
+body.debug .elSfxScene-content[data-name] {
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+body.debug .elSfxScene-content[data-name]:before {
+    content: attr(data-name);
+    display: block;
+    width: 100%;
+    height: 1em;
+    text-align: center;
+    color: rgba(0, 0, 0, .2);
+    opacity: .1;
+    font-size: 120px;
+    font-weight: 700;
+    z-index: 0;
+    pointer-events: none;
+    white-space: nowrap;
+    overflow: hidden;
+    transition: .3s
+}
+
+body.debug .elSfxScene-content[data-name]:hover:before {
+    z-index: 99999;
+    opacity: 1
+}
+
+.elSfxScene:nth-child(0) {
+    z-index: 0
+}
+
+.elSfxScene:first-child {
+    z-index: 1
+}
+
+.elSfxScene:nth-child(2) {
+    z-index: 2
+}
+
+.elSfxScene:nth-child(3) {
+    z-index: 3
+}
+
+.elSfxScene:nth-child(4) {
+    z-index: 4
+}
+
+.elSfxScene:nth-child(5) {
+    z-index: 5
+}
+
+.elSfxScene:nth-child(6) {
+    z-index: 6
+}
+
+.elSfxScene:nth-child(7) {
+    z-index: 7
+}
+
+.elSfxScene:nth-child(8) {
+    z-index: 8
+}
+
+.elSfxScene:nth-child(9) {
+    z-index: 9
+}
+
+.elSfxScene:nth-child(10) {
+    z-index: 10
+}
+
+.elSfxScene:nth-child(11) {
+    z-index: 11
+}
+
+.elSfxScene:nth-child(12) {
+    z-index: 12
+}
+
+.elSfxScene:nth-child(13) {
+    z-index: 13
+}
+
+.elSfxScene:nth-child(14) {
+    z-index: 14
+}
+
+.elSfxScene:nth-child(15) {
+    z-index: 15
+}
+
+.elSfxScene:nth-child(16) {
+    z-index: 16
+}
+
+.elSfxScene:nth-child(17) {
+    z-index: 17
+}
+
+.elSfxScene:nth-child(18) {
+    z-index: 18
+}
+
+.elSfxScene:nth-child(19) {
+    z-index: 19
+}
+
+.elSfxScene:nth-child(20) {
+    z-index: 20
+}
+
+.elSfxScene:nth-child(21) {
+    z-index: 21
+}
+
+.elSfxScene:nth-child(22) {
+    z-index: 22
+}
+
+.elSfxScene:nth-child(23) {
+    z-index: 23
+}
+
+.elSfxScene:nth-child(24) {
+    z-index: 24
+}
+
+.elSfxScene:nth-child(25) {
+    z-index: 25
+}
+
+.elSfxScene:nth-child(26) {
+    z-index: 26
+}
+
+.elSfxScene:nth-child(27) {
+    z-index: 27
+}
+
+.elSfxScene:nth-child(28) {
+    z-index: 28
+}
+
+.elSfxScene:nth-child(29) {
+    z-index: 29
+}
+
+.elSfxScene:nth-child(30) {
+    z-index: 30
+}
+
+.elSfxScene:nth-child(31) {
+    z-index: 31
+}
+
+.elSfxScene:nth-child(32) {
+    z-index: 32
+}
+
+.elSfxScene:nth-child(33) {
+    z-index: 33
+}
+
+.elSfxScene:nth-child(34) {
+    z-index: 34
+}
+
+.elSfxScene:nth-child(35) {
+    z-index: 35
+}
+
+.elSfxScene:nth-child(36) {
+    z-index: 36
+}
+
+.elSfxScene:nth-child(37) {
+    z-index: 37
+}
+
+.elSfxScene:nth-child(38) {
+    z-index: 38
+}
+
+.elSfxScene:nth-child(39) {
+    z-index: 39
+}
+
+.elSfxScene:nth-child(40) {
+    z-index: 40
+}
+
+.elSfxScene:nth-child(41) {
+    z-index: 41
+}
+
+.elSfxScene:nth-child(42) {
+    z-index: 42
+}
+
+.elSfxScene:nth-child(43) {
+    z-index: 43
+}
+
+.elSfxScene:nth-child(44) {
+    z-index: 44
+}
+
+.elSfxScene:nth-child(45) {
+    z-index: 45
+}
+
+.elSfxScene:nth-child(46) {
+    z-index: 46
+}
+
+.elSfxScene:nth-child(47) {
+    z-index: 47
+}
+
+.elSfxScene:nth-child(48) {
+    z-index: 48
+}
+
+.elSfxScene:nth-child(49) {
+    z-index: 49
+}
+
+.elSfxScene:nth-child(50) {
+    z-index: 50
+}
+
+.elSfxScene:nth-child(51) {
+    z-index: 51
+}
+
+.elSfxScene:nth-child(52) {
+    z-index: 52
+}
+
+.elSfxScene:nth-child(53) {
+    z-index: 53
+}
+
+.elSfxScene:nth-child(54) {
+    z-index: 54
+}
+
+.elSfxScene:nth-child(55) {
+    z-index: 55
+}
+
+.elSfxScene:nth-child(56) {
+    z-index: 56
+}
+
+.elSfxScene:nth-child(57) {
+    z-index: 57
+}
+
+.elSfxScene:nth-child(58) {
+    z-index: 58
+}
+
+.elSfxScene:nth-child(59) {
+    z-index: 59
+}
+
+.elSfxScene:nth-child(60) {
+    z-index: 60
+}
+
+.elSfxScene:nth-child(61) {
+    z-index: 61
+}
+
+.elSfxScene:nth-child(62) {
+    z-index: 62
+}
+
+.elSfxScene:nth-child(63) {
+    z-index: 63
+}
+
+.elSfxScene:nth-child(64) {
+    z-index: 64
+}
+
+.elSfxScene:nth-child(65) {
+    z-index: 65
+}
+
+.elSfxScene:nth-child(66) {
+    z-index: 66
+}
+
+.elSfxScene:nth-child(67) {
+    z-index: 67
+}
+
+.elSfxScene:nth-child(68) {
+    z-index: 68
+}
+
+.elSfxScene:nth-child(69) {
+    z-index: 69
+}
+
+.elSfxScene:nth-child(70) {
+    z-index: 70
+}
+
+.elSfxScene:nth-child(71) {
+    z-index: 71
+}
+
+.elSfxScene:nth-child(72) {
+    z-index: 72
+}
+
+.elSfxScene:nth-child(73) {
+    z-index: 73
+}
+
+.elSfxScene:nth-child(74) {
+    z-index: 74
+}
+
+.elSfxScene:nth-child(75) {
+    z-index: 75
+}
+
+.elSfxScene:nth-child(76) {
+    z-index: 76
+}
+
+.elSfxScene:nth-child(77) {
+    z-index: 77
+}
+
+.elSfxScene:nth-child(78) {
+    z-index: 78
+}
+
+.elSfxScene:nth-child(79) {
+    z-index: 79
+}
+
+.elSfxScene:nth-child(80) {
+    z-index: 80
+}
+
+.elSfxScene:nth-child(81) {
+    z-index: 81
+}
+
+.elSfxScene:nth-child(82) {
+    z-index: 82
+}
+
+.elSfxScene:nth-child(83) {
+    z-index: 83
+}
+
+.elSfxScene:nth-child(84) {
+    z-index: 84
+}
+
+.elSfxScene:nth-child(85) {
+    z-index: 85
+}
+
+.elSfxScene:nth-child(86) {
+    z-index: 86
+}
+
+.elSfxScene:nth-child(87) {
+    z-index: 87
+}
+
+.elSfxScene:nth-child(88) {
+    z-index: 88
+}
+
+.elSfxScene:nth-child(89) {
+    z-index: 89
+}
+
+.elSfxScene:nth-child(90) {
+    z-index: 90
+}
+
+.elSfxScene:nth-child(91) {
+    z-index: 91
+}
+
+.elSfxScene:nth-child(92) {
+    z-index: 92
+}
+
+.elSfxScene:nth-child(93) {
+    z-index: 93
+}
+
+.elSfxScene:nth-child(94) {
+    z-index: 94
+}
+
+.elSfxScene:nth-child(95) {
+    z-index: 95
+}
+
+.elSfxScene:nth-child(96) {
+    z-index: 96
+}
+
+.elSfxScene:nth-child(97) {
+    z-index: 97
+}
+
+.elSfxScene:nth-child(98) {
+    z-index: 98
+}
+
+.elSfxScene:nth-child(99) {
+    z-index: 99
+}
+
+.this-file {
+    content: "zero-components/el-sfx-scene/style.scss";
+    content: "zero-components/el-simple-page-index/style.scss"
+}
+
+.el-simple-page-window {
+    position: relative;
+    overflow: hidden
+}
+
+.el-simple-page-window.transition {
+    transition: height .3s
+}
+
+.el-simple-page-window > * {
+    position: absolute;
+    width: 100%;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important
+}
+
+.el-simple-page-window.transition > * {
+    transition: left .4s cubic-bezier(.56, .1, .4, 1)
+}
+
+.this-file {
+    content: "zero-components/el-simple-page-window/style.scss"
+}
+
+.VanillaSimplePager {
+    position: relative;
+    height: 500px;
+    border: 1px solid #444
+}
+
+.VanillaSimplePager-view {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #fff
+}
+
+.VanillaSimplePager-indicators {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    text-align: center
+}
+
+.VanillaSimplePager-indicator {
+    margin: 10px;
+    transition: .5s;
+    font-size: 30px;
+    padding: 10px
+}
+
+.VanillaSimplePager-indicator.active {
+    padding-left: 30px;
+    padding-right: 30px;
+    box-shadow: 0 0 0 1px;
+    filter: brightness(110%)
+}
+
+.VanillaSimplePager-btn {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 100px;
+    height: 100px;
+    font-size: 80px;
+    opacity: .5
+}
+
+.VanillaSimplePager-prev {
+    left: 20px
+}
+
+.VanillaSimplePager-next {
+    right: 20px
+}
+
+.this-file {
+    content: "zero-components/el-simple-pager/style.scss";
+    content: "zero-components/el-slide-toggle/style.scss"
+}
+
+.elSlider {
+    position: relative;
+    width: 100%;
+    height: auto
+}
+
+.elSlider-sliderWrap {
+    position: relative;
+    overflow: hidden;
+    height: 200px
+}
+
+.elSlider-slider {
+    position: absolute;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    width: auto
+}
+
+.elSlider-item, .elSlider-slider {
+    display: flex;
+    align-items: center;
+    height: 100%
+}
+
+.elSlider-item {
+    position: relative;
+    justify-content: center;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    flex: none
+}
+
+.elSlider-item-inner {
+    width: 100%;
+    height: 100%
+}
+
+.elSlider-slider.grab .elSlider-item {
+    pointer-events: none
+}
+
+.elSlider-pointers {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center
+}
+
+.elSlider-pointer {
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: center;
+    align-items: center;
+    width: 1em;
+    height: 1em;
+    color: transparent;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.elSlider-pointer:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 1em;
+    height: 1em;
+    background-color: gray;
+    border-radius: 100%
+}
+
+.this-file {
+    content: "zero-components/el-slider/style.scss"
+}
+
+.snsButton {
+    display: inline-block
+}
+
+.this-file {
+    content: "zero-components/el-sns/style.scss"
+}
+
+.Tabs-buttons {
+    display: flex
+}
+
+.Tabs-button {
+    flex: 1;
+    white-space: nowrap
+}
+
+.Tabs-view:after {
+    content: "";
+    display: block;
+    clear: both
+}
+
+.VanillaTabs {
+    margin: 10px 0
+}
+
+.VanillaTabs-buttons {
+    position: relative;
+    display: flex
+}
+
+.VanillaTabs-button {
+    flex: 1;
+    background-color: #eee;
+    border-radius: 0;
+    border: 0;
+    margin: 0;
+    padding: 8px 0
+}
+
+.VanillaTabs-button.inactive {
+    background-color: #ddd;
+    color: #aaa;
+    transform: translateY(4px);
+    font-size: 14px
+}
+
+.VanillaTabs-button.inactive:hover {
+    background-color: #e2e2e2;
+    color: #9d9d9d
+}
+
+.VanillaTabs-button.inactive:active {
+    background-color: #c4c4c4;
+    color: #919191;
+    transform: translateY(5px)
+}
+
+.VanillaTabs-button.active {
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    color: #222;
+    box-shadow: 0 5px 10px -3px rgba(0, 0, 0, .8);
+    font-size: 16px;
+    letter-spacing: 1px
+}
+
+.VanillaTabs-button:not(:first-child) {
+    box-shadow: inset 1px 0 1px -1px rgba(0, 0, 0, .2)
+}
+
+.VanillaTabs-view {
+    position: relative;
+    z-index: 1;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: -1px 3px 10px -5px rgba(0, 0, 0, .8), 1px 3px 10px -5px rgba(0, 0, 0, .8)
+}
+
+.this-file {
+    content: "zero-components/el-tabs/style.scss"
+}
+
+.elTextBorder {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.elTextBorder-text {
+    position: absolute;
+    color: transparent
+}
+
+.elTextBorder-canvas {
+    position: absolute;
+    pointer-events: none
+}
+
+.this-file {
+    content: "zero-components/el-text-border/style.scss"
+}
+
+.el-twitter-timeline {
+    -webkit-overflow-scrolling: touch;
+    overflow-scrolling: touch
+}
+
+.this-file {
+    content: "zero-components/el-twitter-timeline/style.scss"
+}
+
+.elWipe-mask {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: .6s cubic-bezier(.59, 0, .5, 1)
+}
+
+.elWipe-content {
+    position: absolute
+}
+
+.this-file {
+    content: "zero-components/el-wipe/style.scss"
+}
+
+.ElYoutube {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%
+}
+
+.ElYoutube > iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%
+}
+
+.this-file {
+    content: "zero-components/el-youtube/style.scss"
+}
+
+.VanillaTubex {
+    display: block;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    background-size: cover;
+    background-position: 50%;
+    transition: .15s
+}
+
+.VanillaTubex:hover {
+    cursor: pointer;
+    filter: brightness(110%)
+}
+
+.this-file {
+    content: "zero-components/el-youtube-adaptive/style.scss"
+}
+
+.LoremIpsum {
+    font-size: 14px;
+    font-family: Georgia;
+    font-style: italic;
+    padding: 10px 0
+}
+
+.this-file {
+    content: "zero-components/lorem-ipsum/style.scss";
+    content: "zero-components/v-autozoom/style.scss";
+    content: "zero-components/v-bg/style.scss";
+    content: "zero-components/v-scroll/style.scss";
+    content: "zero-components/v-section/style.scss"
+}
+
+.sfx-leave {
+    z-index: -1 !important;
+    pointer-events: none
+}
+
+.sfx-zoomin-transition {
+    transition: .4s
+}
+
+.sfx-zoomin-enter {
+    opacity: 1;
+    transform: scale(1) translateY(0)
+}
+
+.sfx-zoomin-leave {
+    opacity: 0;
+    transform: scale(1.8)
+}
+
+.sfx-falling-landing-transition {
+    transition: .65s cubic-bezier(.2, .2, .7, 1.3)
+}
+
+.sfx-falling-landing-enter {
+    opacity: 1;
+    transform: scale(1)
+}
+
+.sfx-falling-landing-leave {
+    opacity: 0;
+    transform: scale(1.04) translateY(-5px)
+}
+
+.sfx-falling-landing-fast-transition {
+    transition: .3s cubic-bezier(.2, .2, .7, 1.3)
+}
+
+.sfx-falling-landing-fast-enter {
+    opacity: 1;
+    transform: scale(1)
+}
+
+.sfx-falling-landing-fast-leave {
+    opacity: 0;
+    transform: scale(1.04) translateY(-5px)
+}
+
+.sfx-from-top-transition {
+    transition: .4s
+}
+
+.sfx-from-top-enter {
+    opacity: 1;
+    transform: scale(1) translateY(0)
+}
+
+.sfx-from-top-leave {
+    opacity: 0;
+    transform: scale(1.1) translateY(-50px)
+}
+
+.sfx-from-bot-transition {
+    transition: .4s
+}
+
+.sfx-from-bot-enter {
+    opacity: 1;
+    transform: scale(1) translateY(0)
+}
+
+.sfx-from-bot-leave {
+    opacity: 0;
+    transform: scale(1.1) translateY(50px)
+}
+
+.sfx-from-left-transition {
+    transition: .4s
+}
+
+.sfx-from-left-enter {
+    opacity: 1;
+    transform: scale(1) translateX(0)
+}
+
+.sfx-from-left-leave {
+    opacity: 0;
+    transform: scale(1.1) translateX(-100px)
+}
+
+.sfx-from-leftfar-transition {
+    transition: .4s
+}
+
+.sfx-from-leftfar-enter {
+    opacity: 1;
+    transform: scale(1) translateX(0)
+}
+
+.sfx-from-leftfar-leave {
+    opacity: 0;
+    transform: scale(1.4) translateX(-1000px)
+}
+
+.sfx-from-right-transition {
+    transition: .4s
+}
+
+.sfx-from-right-enter {
+    opacity: 1;
+    transform: scale(1) translateX(0)
+}
+
+.sfx-from-right-leave {
+    opacity: 0;
+    transform: scale(1.1) translateX(100px)
+}
+
+.sfx-from-rightfar-transition {
+    transition: .4s
+}
+
+.sfx-from-rightfar-enter {
+    opacity: 1;
+    transform: scale(1) translateX(0)
+}
+
+.sfx-from-rightfar-leave {
+    opacity: 0;
+    transform: scale(1.4) translateX(1100px)
+}
+
+.sfx-zoomin-bounce-transition {
+    transition: .4s
+}
+
+.sfx-zoomin-bounce-enter {
+    animation: zoomin-bounce .5s linear
+}
+
+.sfx-zoomin-bounce-leave {
+    opacity: 0
+}
+
+@keyframes zoomin-bounce {
+    0% {
+        transform: scale(3);
+        opacity: 0
+    }
+    50% {
+        transform: scale(1);
+        opacity: .2
+    }
+    60% {
+        transform: scale(1.3);
+        opacity: .4
+    }
+    70% {
+        transform: scale(1);
+        opacity: .6
+    }
+    75% {
+        transform: scale(1.15);
+        opacity: .8
+    }
+    80% {
+        transform: scale(1);
+        opacity: .9
+    }
+    85% {
+        transform: scale(1.07);
+        opacity: 1
+    }
+    90% {
+        transform: scale(1);
+        opacity: 1
+    }
+    95% {
+        transform: scale(1.03);
+        opacity: 1
+    }
+    to {
+        transform: scale(1);
+        opacity: 1
+    }
+}
+
+.sfx-fadein-transition {
+    transition: .4s
+}
+
+.sfx-fadein-enter {
+    opacity: 1;
+    transform: scale(1)
+}
+
+.sfx-fadein-leave {
+    opacity: 0;
+    transform: scale(.97)
+}
+
+.sfx-rotatein-right-transition {
+    transition: .4s cubic-bezier(.3, .3, .4, 1.5);
+    transform-origin: left top
+}
+
+.sfx-rotatein-right-enter {
+    opacity: 1;
+    transform: skew(0deg) rotate(0deg)
+}
+
+.sfx-rotatein-right-leave {
+    opacity: 0;
+    transform: skew(-20deg) rotate(90deg)
+}
+
+.sfx-rotatein-left-transition {
+    transition: .4s cubic-bezier(.3, .3, .4, 1.5);
+    transform-origin: right top
+}
+
+.sfx-rotatein-left-enter {
+    opacity: 1;
+    transform: skew(0deg) rotate(0deg)
+}
+
+.sfx-rotatein-left-leave {
+    opacity: 0;
+    transform: skew(20deg) rotate(-90deg)
+}
+
+.this-file {
+    content: "zero-components/v-sfx/style.scss"
+}
+
+.ChuniBtn {
+    position: relative;
+    display: inline-block;
+    background-color: #fff;
+    margin: 5px;
+    overflow: hidden;
+    text-align: center
+}
+
+.ChuniBtn, html:not(.ie) .ChuniBtn {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+html:not(.ie) .ChuniBtn:hover {
+    filter: brightness(110%);
+    cursor: pointer
+}
+
+html:not(.ie) .ChuniBtn:active {
+    filter: brightness(98%);
+    transform: translateY(1px)
+}
+
+.ChuniBtn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 1em;
+    height: 100%;
+    padding: 10px 20px;
+    line-height: 1.2
+}
+
+.ChuniBtn {
+    font-size: 23px
+}
+
+.ChuniBtn.small {
+    font-size: 16px
+}
+
+.ChuniBtn.small a {
+    line-height: 1.4;
+    padding: 8px 6px
+}
+
+[data-page=character] .ChuniBtn {
+    width: 19%;
+    font-size: 16px
+}
+
+.ChuniBtn-border {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+.ChuniBtn-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6;
+    font-family: Noto Sans JP, sans-serif;
+    font-style: italic;
+    font-weight: 700;
+    color: #fff;
+    z-index: 1
+}
+
+html:not(.ie):not(.edge) .ChuniBtn-content {
+    line-height: 1.2
+}
+
+.ChuniBtn {
+    background: #0a99af;
+    color: #fff;
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #0a99af, 4px 4px 0 #000;
+    transform: translate(0)
+}
+
+.ChuniBtn a {
+    color: #fff !important
+}
+
+.ChuniBtn:active, .ChuniBtn:hover {
+    transform: translateY(1px);
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #0a99af
+}
+
+.ChuniBtn.paradise {
+    background: #0a99af;
+    color: #fff;
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #0a99af, 4px 4px 0 #000;
+    transform: translate(0)
+}
+
+.ChuniBtn.paradise a {
+    color: #fff !important
+}
+
+.ChuniBtn.paradise:active, .ChuniBtn.paradise:hover {
+    transform: translateY(1px);
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #0a99af
+}
+
+.ChuniBtn.crystal {
+    background: #b64b91;
+    color: #fff;
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #b64b91, 4px 4px 0 #000;
+    transform: translate(0)
+}
+
+.ChuniBtn.crystal a {
+    color: #fff !important
+}
+
+.ChuniBtn.crystal:active, .ChuniBtn.crystal:hover {
+    transform: translateY(1px);
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #b64b91
+}
+
+.ChuniBtn.amazon {
+    background: #094;
+    color: #fff;
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #094, 4px 4px 0 #000;
+    transform: translate(0)
+}
+
+.ChuniBtn.amazon a {
+    color: #fff !important
+}
+
+.ChuniBtn.amazon:active, .ChuniBtn.amazon:hover {
+    transform: translateY(1px);
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #094
+}
+
+.ChuniBtn.star {
+    background: #dc4648;
+    color: #fff;
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #dc4648, 4px 4px 0 #000;
+    transform: translate(0)
+}
+
+.ChuniBtn.star a {
+    color: #fff !important
+}
+
+.ChuniBtn.star:active, .ChuniBtn.star:hover {
+    transform: translateY(1px);
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #dc4648
+}
+
+.ChuniBtn.air {
+    background: #3585bb;
+    color: #fff;
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #3585bb, 4px 4px 0 #000;
+    transform: translate(0)
+}
+
+.ChuniBtn.air a {
+    color: #fff !important
+}
+
+.ChuniBtn.air:active, .ChuniBtn.air:hover {
+    transform: translateY(1px);
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #3585bb
+}
+
+.ChuniBtn.vanilla {
+    background: #e48800;
+    color: #fff;
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #e48800, 4px 4px 0 #000;
+    transform: translate(0)
+}
+
+.ChuniBtn.vanilla a {
+    color: #fff !important
+}
+
+.ChuniBtn.vanilla:active, .ChuniBtn.vanilla:hover {
+    transform: translateY(1px);
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #e48800
+}
+
+.ChuniBtn.irodori {
+    background: #f85fae;
+    color: #fff;
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #f85fae, 4px 4px 0 #000;
+    transform: translate(0)
+}
+
+.ChuniBtn.irodori a {
+    color: #fff !important
+}
+
+.ChuniBtn.irodori:active, .ChuniBtn.irodori:hover {
+    transform: translateY(1px);
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #f85fae
+}
+
+.ChuniBtn.kotonoha {
+    background: #ccbe22;
+    color: #fff;
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #ccbe22, 4px 4px 0 #000;
+    transform: translate(0)
+}
+
+.ChuniBtn.kotonoha a {
+    color: #fff !important
+}
+
+.ChuniBtn.kotonoha:active, .ChuniBtn.kotonoha:hover {
+    transform: translateY(1px);
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #ccbe22
+}
+
+.ChuniBtn.cardmaker {
+    background: #262080;
+    color: #fff;
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #262080, 4px 4px 0 #000;
+    transform: translate(0)
+}
+
+.ChuniBtn.cardmaker a {
+    color: #fff !important
+}
+
+.ChuniBtn.cardmaker:active, .ChuniBtn.cardmaker:hover {
+    transform: translateY(1px);
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #262080
+}
+
+.ChuniBtn.pops_anime {
+    background: #f31870;
+    color: #fff;
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #f31870, 4px 4px 0 rgba(43, 52, 59, .5);
+    transform: translate(0)
+}
+
+.ChuniBtn.pops_anime a {
+    color: #fff !important
+}
+
+.ChuniBtn.pops_anime:active, .ChuniBtn.pops_anime:hover {
+    transform: translateY(1px);
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #f31870
+}
+
+.ChuniBtn.niconico {
+    background: #87197a;
+    color: #fff;
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #87197a, 4px 4px 0 rgba(43, 52, 59, .5);
+    transform: translate(0)
+}
+
+.ChuniBtn.niconico a {
+    color: #fff !important
+}
+
+.ChuniBtn.niconico:active, .ChuniBtn.niconico:hover {
+    transform: translateY(1px);
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #87197a
+}
+
+.ChuniBtn.toho {
+    background: #1336cb;
+    color: #fff;
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #1336cb, 4px 4px 0 rgba(43, 52, 59, .5);
+    transform: translate(0)
+}
+
+.ChuniBtn.toho a {
+    color: #fff !important
+}
+
+.ChuniBtn.toho:active, .ChuniBtn.toho:hover {
+    transform: translateY(1px);
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #1336cb
+}
+
+.ChuniBtn.variety {
+    background: #1aa357;
+    color: #fff;
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #1aa357, 4px 4px 0 rgba(43, 52, 59, .5);
+    transform: translate(0)
+}
+
+.ChuniBtn.variety a {
+    color: #fff !important
+}
+
+.ChuniBtn.variety:active, .ChuniBtn.variety:hover {
+    transform: translateY(1px);
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #1aa357
+}
+
+.ChuniBtn.gekimai {
+    background: #5a3dc5;
+    color: #fff;
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #5a3dc5, 4px 4px 0 rgba(43, 52, 59, .5);
+    transform: translate(0)
+}
+
+.ChuniBtn.gekimai a {
+    color: #fff !important
+}
+
+.ChuniBtn.gekimai:active, .ChuniBtn.gekimai:hover {
+    transform: translateY(1px);
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #5a3dc5
+}
+
+.ChuniBtn.irodorimidori {
+    background: #f85fae;
+    color: #fff;
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #f85fae, 4px 4px 0 rgba(43, 52, 59, .5);
+    transform: translate(0)
+}
+
+.ChuniBtn.irodorimidori a {
+    color: #fff !important
+}
+
+.ChuniBtn.irodorimidori:active, .ChuniBtn.irodorimidori:hover {
+    transform: translateY(1px);
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #f85fae
+}
+
+.ChuniBtn.original {
+    background: #aa0808;
+    color: #fff;
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #aa0808, 4px 4px 0 rgba(43, 52, 59, .5);
+    transform: translate(0)
+}
+
+.ChuniBtn.original a {
+    color: #fff !important
+}
+
+.ChuniBtn.original:active, .ChuniBtn.original:hover {
+    transform: translateY(1px);
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #aa0808
+}
+
+.ChuniBtn.we {
+    background-position: 50%;
+    background-size: cover;
+    background-image: url(./assets/chuniBtn/bg_we.png);
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #2b343b, 4px 4px 0 rgba(43, 52, 59, .5)
+}
+
+.ChuniBtn.course {
+    background: #041266;
+    color: #fff;
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #041266, 4px 4px 0 rgba(43, 52, 59, .5);
+    transform: translate(0)
+}
+
+.ChuniBtn.course a {
+    color: #fff !important
+}
+
+.ChuniBtn.course:active, .ChuniBtn.course:hover {
+    transform: translateY(1px);
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #041266
+}
+
+.ChuniBtn.new {
+    background: #d82a46;
+    color: #fff;
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #d82a46, 4px 4px 0 rgba(43, 52, 59, .5);
+    transform: translate(0)
+}
+
+.ChuniBtn.new a {
+    color: #fff !important
+}
+
+.ChuniBtn.new:active, .ChuniBtn.new:hover {
+    transform: translateY(1px);
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #d82a46
+}
+
+.ChuniBtn.sortarrow {
+    font-size: 14px;
+    width: 42px;
+    height: 38px;
+    background: linear-gradient(180deg, #0a99af 50%, #0a99af 0);
+    padding: 0 .5em;
+    margin: 0 0 0 10px;
+    color: #fff;
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #0a99af
+}
+
+.ChuniBtn.sortarrow:before {
+    background: none
+}
+
+.ChuniBtn.sortarrow.up {
+    background-image: url(./assets/chuniBtn/sorticon_up.png)
+}
+
+.ChuniBtn.sortarrow.down, .ChuniBtn.sortarrow.up {
+    background-size: 80%;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-color: #0a99af
+}
+
+.ChuniBtn.sortarrow.down {
+    background-image: url(./assets/chuniBtn/sorticon_down.png)
+}
+
+.this-file {
+    content: "components/chuniBtn/style.scss"
+}
+
+.ChuniButtons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center
+}
+
+.this-file {
+    content: "components/chuniButtons/style.scss";
+    content: "components/chuniCd/style.scss";
+    content: "components/chuniCdList/style.scss"
+}
+
+.CommonBox {
+    display: block;
+    position: relative;
+    width: 100%;
+    padding: 0;
+    z-index: 1
+}
+
+.CommonBox:after {
+    display: block;
+    position: absolute;
+    content: "";
+    top: 20px;
+    left: 20px;
+    width: calc(100% - 33px);
+    height: calc(100% - 40px);
+    background: #f5f8f5;
+    z-index: -1
+}
+
+.CommonBox-inner, .CommonBox.linkBox {
+    position: relative
+}
+
+.CommonBox-inner {
+    z-index: 10;
+    padding: 30px
+}
+
+@media screen and (max-width: 600px) {
+    .CommonBox-inner {
+        padding: 30px 25px 30px 22px
+    }
+}
+
+.CommonBox-top {
+    display: flex;
+    position: absolute;
+    top: 2px;
+    width: 100%;
+    height: 66px
+}
+
+.CommonBox-top span:first-child {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 125px;
+    height: 100%;
+    background-image: url(./assets/chuniCommonBox/top_l.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain
+}
+
+.CommonBox-top span:nth-child(2) {
+    display: block;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: calc(100% - 248px);
+    height: 100%;
+    margin: auto;
+    background-image: url(./assets/chuniCommonBox/top.png);
+    background-position: top;
+    background-repeat: repeat-x
+}
+
+.CommonBox-top span:nth-child(3) {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 125px;
+    height: 100%;
+    background-image: url(./assets/chuniCommonBox/top_r.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain
+}
+
+.CommonBox-bottom {
+    display: flex;
+    position: absolute;
+    bottom: 2px;
+    width: 100%;
+    height: 66px
+}
+
+.CommonBox-bottom span:first-child {
+    width: 125px;
+    background-image: url(./assets/chuniCommonBox/btm_l.png);
+    background-repeat: no-repeat;
+    background-size: contain
+}
+
+.CommonBox-bottom span:first-child, .CommonBox-bottom span:nth-child(2) {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    background-position: bottom
+}
+
+.CommonBox-bottom span:nth-child(2) {
+    right: 0;
+    width: calc(100% - 248px);
+    margin: 0 auto;
+    background-image: url(./assets/chuniCommonBox/btm.png);
+    background-repeat: repeat-x
+}
+
+.CommonBox-bottom span:nth-child(3) {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 125px;
+    height: 100%;
+    background-image: url(./assets/chuniCommonBox/btm_r.png);
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain
+}
+
+.CommonBox-bg {
+    height: calc(100% - 132px);
+    width: 100%;
+    background-image: url(./assets/chuniCommonBox/bg_l.png), url(./assets/chuniCommonBox/bg_r.png);
+    background-position: 0, 100%;
+    background-repeat: repeat-y
+}
+
+.CommonBox-bg, .CommonBox-bg:before {
+    position: absolute;
+    display: block;
+    top: 66px;
+    margin: auto
+}
+
+.CommonBox-bg:before {
+    width: calc(100% - 250px);
+    height: calc(100% - 132x);
+    content: "";
+    bottom: 0;
+    left: 125px;
+    right: 0;
+    background-color: #f5f8f5;
+    z-index: -1
+}
+
+.CommonBox.transparent {
+    position: relative;
+    background: none;
+    z-index: 1;
+    overflow: hidden
+}
+
+.CommonBox.transparent:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/chuniCommonBox/bg_w.png);
+    background-repeat: repeat;
+    opacity: .6;
+    z-index: -1
+}
+
+.CommonBox.transparent .CommonBox-inner {
+    position: relative;
+    background: none
+}
+
+.CommonBox.transparent .CommonBox-inner:before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: url(./assets/chuniCommonBox/bg.png);
+    background-repeat: repeat;
+    opacity: .6;
+    z-index: -1
+}
+
+.CommonBox.linkBox {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.CommonBox.linkBox:hover {
+    transform: translateY(-1px)
+}
+
+.CommonBox.linkBox:active {
+    transform: translateY(0)
+}
+
+.this-file {
+    content: "components/chuniCommonBox/style.scss"
+}
+
+.CommonBtn {
+    display: inline-block;
+    background: #0a99af;
+    color: #fff;
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #0a99af, 4px 4px 0 #000;
+    transform: translate(0);
+    margin: 10px auto;
+    cursor: pointer;
+    font-family: Noto Sans JP, sans-serif
+}
+
+.CommonBtn a {
+    color: #fff !important
+}
+
+.CommonBtn:active, .CommonBtn:hover {
+    transform: translateY(1px);
+    box-shadow: inset 0 0 0 2px #fff, 0 0 0 2px #0a99af
+}
+
+.CommonBtn a {
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+.CommonBtn a:hover {
+    filter: brightness(120%)
+}
+
+.CommonBtn a:active {
+    filter: brightness(90%);
+    transform: translateY(1px);
+    cursor: pointer
+}
+
+.CommonBtn-inner {
+    display: inline-block;
+    text-align: center;
+    line-height: 1.2
+}
+
+.CommonBtn-inner-text {
+    display: inline-block;
+    padding: 13px 30px;
+    color: #fff;
+    font-style: italic
+}
+
+.CommonBtn-inner-text.blank {
+    display: block;
+    position: relative;
+    padding-right: 50px
+}
+
+.CommonBtn-inner-text.blank:before {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    width: 20px;
+    height: 20px;
+    top: 0;
+    bottom: 0;
+    right: 15px;
+    margin: auto 0;
+    background-image: url(./assets/chuniCommonBtn/blank.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain
+}
+
+.this-file {
+    content: "components/chuniCommonBtn/style.scss"
+}
+
+.Dlpop {
+    will-change: transform
+}
+
+@media screen and (min-width: 601px) {
+    .Dlpop {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 120px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Dlpop {
+        overflow-x: hidden;
+        height: 300px;
+        width: 100vw;
+        padding-top: 10px;
+        margin-bottom: 50px
+    }
+}
+
+.Dlpop-SiteSection {
+    display: block;
+    position: relative;
+    padding-top: 6px;
+    margin: 0 auto
+}
+
+@media screen and (min-width: 601px) {
+    .Dlpop-SiteSection {
+        width: 812px;
+        height: 514px;
+        background-image: url(./assets/chuniDlpop/pc/slider_bg.png);
+        background-repeat: no-repeat;
+        background-size: contain
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Dlpop-SiteSection {
+        width: 390px;
+        height: 237.5px;
+        padding-top: 2px;
+        background-image: url(./assets/chuniDlpop/sp/slider_bg.png);
+        background-repeat: no-repeat;
+        background-size: contain
+    }
+}
+
+.Dlpop .elCarousel-chuni-body {
+    width: 800px;
+    height: 490px;
+    margin: auto;
+    text-align: center
+}
+
+@media screen and (max-width: 600px) {
+    .Dlpop .elCarousel-chuni-body {
+        width: 360px;
+        height: 220.5px
+    }
+}
+
+.Dlpop .elCarousel-chuni-torso {
+    width: 766px;
+    height: 431px;
+    margin: 27px auto 0
+}
+
+@media screen and (max-width: 600px) {
+    .Dlpop .elCarousel-chuni-torso {
+        width: 357px;
+        height: 196.48px;
+        margin: 15px auto 0
+    }
+}
+
+.Dlpop .elCarousel-chuni-item {
+    border: 1px solid #fff;
+    overflow: hidden
+}
+
+.Dlpop .elCarousel-chuni-btn {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -74px;
+    margin: auto;
+    background-image: url(./assets/chuniDlpop/pc/arrow.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+    filter: drop-shadow(0 0 4px #666)
+}
+
+@media screen and (max-width: 600px) {
+    .Dlpop .elCarousel-chuni-btn {
+        width: 48.5px;
+        height: 38.5px;
+        left: -20px;
+        background-image: url(./assets/chuniDlpop/sp/arrow.png)
+    }
+}
+
+.Dlpop .elCarousel-chuni-next {
+    background-image: url(./assets/chuniDlpop/pc/arrow2.png);
+    top: 0;
+    bottom: 0;
+    left: auto;
+    right: -74px
+}
+
+@media screen and (max-width: 600px) {
+    .Dlpop .elCarousel-chuni-next {
+        right: -20px;
+        background-image: url(./assets/chuniDlpop/sp/arrow2.png)
+    }
+}
+
+.Dlpop .elCarousel-chuni .SiteSection a {
+    display: block;
+    background-size: 100%
+}
+
+.Dlpop .elCarousel-chuni-indicators {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 8px auto;
+    padding: 4px 10px;
+    width: fit-content;
+    max-width: 100%;
+    min-width: 100px;
+    height: 44px;
+    background-image: url(./assets/chuniDlpop/icon_bg.png);
+    background-position: top;
+    background-repeat: repeat-x;
+    background-size: contain
+}
+
+@media screen and (max-width: 600px) {
+    .Dlpop .elCarousel-chuni-indicators {
+        padding: 0;
+        line-height: 1.2;
+        height: 22px
+    }
+}
+
+.Dlpop .elCarousel-chuni-indicators:before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 44px;
+    top: 0;
+    left: -36px;
+    z-index: 2;
+    background-image: url(./assets/chuniDlpop/icon_bg_l.png);
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+@media screen and (max-width: 600px) {
+    .Dlpop .elCarousel-chuni-indicators:before {
+        width: 20px;
+        height: 22px;
+        top: 0;
+        left: -17px
+    }
+}
+
+.Dlpop .elCarousel-chuni-indicators:after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 44px;
+    top: 0;
+    right: -36px;
+    z-index: 2;
+    background-image: url(./assets/chuniDlpop/icon_bg_r.png);
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat
+}
+
+@media screen and (max-width: 600px) {
+    .Dlpop .elCarousel-chuni-indicators:after {
+        width: 20px;
+        height: 22px;
+        top: 0;
+        right: -17px
+    }
+}
+
+.Dlpop .elCarousel-chuni-indicator {
+    display: inline-block;
+    font-size: 0;
+    line-height: 1.2;
+    margin: 0;
+    padding: 2px
+}
+
+.Dlpop .elCarousel-chuni-indicator .apple_off {
+    cursor: pointer
+}
+
+@media screen and (min-width: 601px) {
+    .Dlpop .elCarousel-chuni-indicator .apple_off {
+        font-size: 25px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Dlpop .elCarousel-chuni-indicator .apple_off {
+        font-size: 12px
+    }
+}
+
+.Dlpop .elCarousel-chuni-indicator.active .apple_off {
+    background-position: 0 0
+}
+
+.this-file {
+    content: "components/chuniDlpop/style.scss"
+}
+
+.Footer {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 312px;
+    margin: 240px 0 0;
+    color: #fff;
+    pointer-events: none;
+    overflow-x: hidden;
+    background-image: url(./assets/chuniFooter/footer.png?2021);
+    background-repeat: repeat-x;
+    background-position: bottom
+}
+
+@media screen and (max-width: 600px) {
+    .Footer {
+        width: 100%;
+        height: auto;
+        background-image: url(./assets/chuniFooter/footer_sp.png?2021);
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: auto
+    }
+}
+
+.Footer-wrap {
+    margin: 0 auto;
+    padding: 0 0 10px;
+    width: 100%;
+    height: 100%
+}
+
+@media screen and (max-width: 600px) {
+    .Footer-wrap {
+        width: 100%
+    }
+}
+
+.Footer-wrap-text {
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 80px 0 10px;
+    font-size: 14px;
+    line-height: 1.6;
+    text-align: left;
+    pointer-events: all
+}
+
+@media screen and (max-width: 600px) {
+    .Footer-wrap-text {
+        padding: 110px 15px 0
+    }
+}
+
+.Footer-wrap-text a {
+    text-decoration: underline
+}
+
+.Footer-wrap-text a:hover {
+    text-decoration: none
+}
+
+.Footer-wrap-text small {
+    font-size: 14px;
+    line-height: 1.6
+}
+
+a.logo {
+    display: block;
+    width: 171px;
+    height: 60px;
+    margin: 10px 0 0 30px;
+    background-image: url(./assets/chuniFooter/logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: transparent;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 0
+}
+
+a.logo:hover {
+    filter: brightness(110%)
+}
+
+a.logo:active {
+    filter: brightness(90%);
+    transform: translateY(1px);
+    cursor: pointer
+}
+
+@media screen and (max-width: 600px) {
+    a.logo {
+        margin: 30px auto
+    }
+}
+
+.this-file {
+    content: "components/chuniFooter/style.scss"
+}
+
+@media screen and (min-width: 601px) {
+    .Gnavi {
+        position: relative
+    }
+
+    .Gnavi nav {
+        display: block;
+        position: relative;
+        z-index: 100;
+        width: 1008px;
+        margin: -20px auto 0;
+        background-image: url(./assets/chuniGnavi/pc/navi_bg.png);
+        background-repeat: no-repeat;
+        background-position: 50%
+    }
+
+    .Gnavi nav, .Gnavi ul {
+        height: 63px;
+        padding: 0
+    }
+
+    .Gnavi ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 913px;
+        margin: 0 auto;
+        text-align: center
+    }
+
+    .Gnavi li {
+        display: inline-block;
+        height: 20px;
+        padding: 0;
+        margin: 0;
+        background-image: url(./assets/chuniGnavi/pc/navi.png);
+        background-repeat: no-repeat;
+        background-position: 0 0
+    }
+
+    .Gnavi li:first-child {
+        width: 97px;
+        background-position: -1px 0
+    }
+
+    .Gnavi li:first-child.active, .Gnavi li:first-child:active, .Gnavi li:first-child:hover {
+        background-position: -1px -20px
+    }
+
+    .Gnavi li:nth-child(2) {
+        width: 110px;
+        background-position: -98px 0
+    }
+
+    .Gnavi li:nth-child(2).active, .Gnavi li:nth-child(2):active, .Gnavi li:nth-child(2):hover {
+        background-position: -98px -20px
+    }
+
+    .Gnavi li:nth-child(3) {
+        width: 114px;
+        background-position: -208px 0
+    }
+
+    .Gnavi li:nth-child(3).active, .Gnavi li:nth-child(3):active, .Gnavi li:nth-child(3):hover {
+        background-position: -208px -20px
+    }
+
+    .Gnavi li:nth-child(4) {
+        width: 131px;
+        background-position: -322px 0
+    }
+
+    .Gnavi li:nth-child(4).active, .Gnavi li:nth-child(4):active, .Gnavi li:nth-child(4):hover {
+        background-position: -322px -20px
+    }
+
+    .Gnavi li:nth-child(5) {
+        width: 138px;
+        background-position: -453px 0
+    }
+
+    .Gnavi li:nth-child(5).active, .Gnavi li:nth-child(5):active, .Gnavi li:nth-child(5):hover {
+        background-position: -453px -20px
+    }
+
+    .Gnavi li:nth-child(6) {
+        width: 133px;
+        background-position: -591px 0
+    }
+
+    .Gnavi li:nth-child(6).active, .Gnavi li:nth-child(6):active, .Gnavi li:nth-child(6):hover {
+        background-position: -591px -20px
+    }
+
+    .Gnavi li:nth-child(7) {
+        width: 187px;
+        background-position: -723px 0
+    }
+
+    .Gnavi li:nth-child(7).active, .Gnavi li:nth-child(7):active, .Gnavi li:nth-child(7):hover {
+        background-position: -723px -20px
+    }
+
+    .Gnavi li a {
+        display: block;
+        width: 100%;
+        height: 100%;
+        color: transparent;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        font-size: 0
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Gnavi {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh
+    }
+
+    .Gnavi.isShow {
+        pointer-events: auto
+    }
+
+    .Gnavi:not(.isShow) {
+        pointer-events: none
+    }
+
+    .Gnavi-bg {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, .7);
+        transition: .3s
+    }
+
+    .Gnavi-bg.isShow {
+        opacity: 1
+    }
+
+    .Gnavi-bg:not(.isShow) {
+        opacity: 0;
+        pointer-events: none
+    }
+
+    .Gnavi-logo {
+        top: -62px;
+        left: 3px;
+        width: 112.5px;
+        height: 57px;
+        font-size: 0;
+        color: transparent;
+        background-image: url(./assets/chuniGnavi/sp/sp_logo.png?2021)
+    }
+
+    .Gnavi-contents, .Gnavi-logo {
+        display: block;
+        position: absolute;
+        background-size: contain;
+        background-repeat: no-repeat
+    }
+
+    .Gnavi-contents {
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        width: 387px;
+        height: 379px;
+        padding: 80px 21px 0;
+        margin: 58px auto 0;
+        transition: .3s;
+        background-image: url(./assets/chuniGnavi/sp/sp_navi_bg.png?2021);
+        background-position: 50%
+    }
+
+    .Gnavi-contents.isShow {
+        opacity: 1;
+        top: 14px;
+        transform: translateY(0)
+    }
+
+    .Gnavi-contents:not(.isShow) {
+        opacity: 0;
+        top: -120%;
+        pointer-events: none;
+        transform: translateY(-20px)
+    }
+
+    .Gnavi-humberger {
+        position: absolute;
+        pointer-events: all;
+        top: 8px;
+        right: 8px;
+        z-index: 300;
+        width: 55px;
+        height: 55px;
+        transition: .5s;
+        background-image: url(./assets/chuniGnavi/sp/sp_navi_menubtn.png?2021);
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: contain;
+        color: transparent;
+        font-size: 0;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none
+    }
+
+    .Gnavi-humberger:hover {
+        filter: brightness(110%);
+        cursor: pointer
+    }
+
+    .Gnavi-humberger:active {
+        filter: brightness(98%);
+        transform: translateY(1px)
+    }
+
+    .Gnavi-drawer-navi {
+        display: block;
+        position: fixed;
+        top: -200vh
+    }
+
+    .Gnavi-drawer-navi-top {
+        position: absolute;
+        z-index: 2;
+        width: 100vw;
+        height: 147px;
+        margin: -10px 0 0;
+        transition: .1s
+    }
+
+    .Gnavi-drawer-navi-top.isShow {
+        opacity: 1;
+        top: 0;
+        transform: translateY(0)
+    }
+
+    .Gnavi-drawer-navi-top:not(.isShow) {
+        opacity: 0;
+        top: -120%;
+        pointer-events: none;
+        transform: translateY(-20px)
+    }
+
+    .Gnavi-navi-btns-inner, .Gnavi-navi-btns-inner-btn {
+        display: flex;
+        flex-wrap: wrap
+    }
+
+    .Gnavi-navi-btns-inner-btn {
+        width: 50%
+    }
+
+    .Gnavi-btn {
+        display: block;
+        width: 167px;
+        height: 52.5px;
+        margin: 0 7px 7px 0;
+        color: transparent;
+        font-size: 0;
+        -webkit-user-select: none;
+        -ms-user-select: none;
+        user-select: none
+    }
+
+    .Gnavi-btn:hover {
+        filter: brightness(110%);
+        cursor: pointer
+    }
+
+    .Gnavi-btn:active {
+        filter: brightness(98%);
+        transform: translateY(1px)
+    }
+
+    .Gnavi-btn {
+        background: url(./assets/chuniGnavi/sp/sp_navi_btn.png?2021) 0 0/700% 100%
+    }
+
+    .Gnavi-btn:first-child {
+        background-position: 0 0
+    }
+
+    .Gnavi-btn:nth-child(2) {
+        background-position: -100% 0
+    }
+
+    .Gnavi-btn:nth-child(3) {
+        background-position: -200% 0
+    }
+
+    .Gnavi-btn:nth-child(4) {
+        background-position: -300% 0
+    }
+
+    .Gnavi-btn:nth-child(5) {
+        background-position: -400% 0
+    }
+
+    .Gnavi-btn:nth-child(6) {
+        background-position: -500% 0
+    }
+
+    .Gnavi-btn:nth-child(7) {
+        background-position: -600% 0
+    }
+
+    .Gnavi-btn:nth-child(2n) {
+        margin: 0 0 7px
+    }
+
+    .Gnavi-btn a {
+        display: inline-block;
+        width: 100%;
+        height: 100%
+    }
+
+    body.en .Gnavi-humberger.down {
+        top: 69px
+    }
+}
+
+@media screen and (max-width: 600px) and (max-width: 600px) {
+    .Gnavi-contents-penguin {
+        position: absolute;
+        display: block;
+        pointer-events: none;
+        top: 251px;
+        right: 36px;
+        width: 149px;
+        height: 119.5px;
+        background-image: url(./assets/chuniGnavi/sp/navi_penguin.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 0 0;
+        animation: navi-penguin .5s infinite
+    }
+
+    .Gnavi-contents-penguin .Sprite {
+        display: block;
+        position: absolute;
+        font-size: 60px
+    }
+
+    .Gnavi-contents-penguin .Sprite:first-child {
+        transform: rotate(-40deg);
+        animation: navi-rhythm-note1 .5s -.25s infinite;
+        top: 60px;
+        left: 135px;
+        font-size: 44px
+    }
+
+    .Gnavi-contents-penguin .Sprite:nth-child(2) {
+        transform: rotate(0deg);
+        animation: navi-rhythm-note2 .5s -.25s infinite;
+        top: 20px;
+        left: 120px;
+        font-size: 42px
+    }
+
+    .Gnavi-contents-penguin .Sprite:nth-child(3) {
+        transform: rotate(0deg);
+        animation: navi-rhythm-note2 .5s -.25s infinite;
+        top: 70px;
+        left: -10px;
+        font-size: 40px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    @keyframes navi-penguin {
+        0% {
+            transform: translateY(0) scale(1)
+        }
+        50% {
+            transform: translateY(-1px) scale(1)
+        }
+        to {
+            transform: translateY(0) scale(1)
+        }
+    }@keyframes navi-rhythm-note1 {
+         0% {
+             transform: rotate(40deg) scale(1)
+         }
+         50% {
+             transform: rotate(20deg) scale(.85)
+         }
+         to {
+             transform: rotate(40deg) scale(1)
+         }
+     }@keyframes navi-rhythm-note2 {
+          0% {
+              transform: rotate(0) scale(1)
+          }
+          50% {
+              transform: rotate(20deg) scale(.85)
+          }
+          to {
+              transform: rotate(0) scale(1)
+          }
+      }
+}
+
+.this-file {
+    content: "components/chuniGnavi/style.scss"
+}
+
+.ChuniGotoTop {
+    position: fixed;
+    right: 5px;
+    z-index: 999;
+    color: transparent;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 0;
+    background-image: url(./assets/chuniGotoTop/goto.png);
+    background-repeat: no-repeat;
+    background-size: contain
+}
+
+@media screen and (min-width: 601px) {
+    .ChuniGotoTop {
+        width: 110px;
+        height: 110px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .ChuniGotoTop {
+        width: 80px;
+        height: 80px
+    }
+}
+
+.ChuniGotoTop:hover {
+    filter: brightness(120%)
+}
+
+.ChuniGotoTop:active {
+    filter: brightness(90%);
+    transform: translateY(1px);
+    cursor: pointer
+}
+
+.ChuniGotoTop.show {
+    transition: .3s, bottom .4s cubic-bezier(.07, .83, .4, 2.26);
+    bottom: 5px;
+    opacity: 1;
+    pointer-events: all;
+    transform: scale(1) translateY(0)
+}
+
+.ChuniGotoTop.hide {
+    transition: .3s;
+    bottom: -24px;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(.96) translateY(100%)
+}
+
+.this-file {
+    content: "components/chuniGotoTop/style.scss"
+}
+
+.Header {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    z-index: 100
+}
+
+.Header-wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding-top: 10px
+}
+
+@media screen and (max-width: 600px) {
+    .Header-wrap {
+        width: 100vw
+    }
+}
+
+.Header-wrap-segalogo {
+    display: block;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    width: 100px;
+    height: 68px;
+    color: transparent;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 0;
+    background-image: url(./assets/chuniHeader/sega_logo.png);
+    background-repeat: no-repeat;
+    background-size: contain
+}
+
+@media screen and (max-width: 600px) {
+    .Header-wrap-segalogo {
+        top: 10px;
+        left: 8px;
+        width: 70px;
+        height: 0;
+        padding: 0 0 6%;
+        background-size: contain;
+        background-position: 50%
+    }
+}
+
+.Header-wrap-segalogo:hover {
+    filter: brightness(104%)
+}
+
+.Header-wrap-segalogo:active {
+    filter: brightness(94%);
+    transform: translateY(1px);
+    cursor: pointer
+}
+
+.Header-wrap-logo {
+    display: block;
+    width: 482px;
+    height: 272px;
+    margin: 0 auto 22px;
+    color: transparent;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 0;
+    background-image: url(./assets/chuniHeader/logo.png?2021);
+    background-repeat: no-repeat;
+    background-size: contain
+}
+
+@media screen and (max-width: 600px) {
+    .Header-wrap-logo {
+        width: 250px;
+        height: 0;
+        padding: 70px 0;
+        margin: 10px auto 0;
+        background-size: contain;
+        background-position: 50%
+    }
+}
+
+.Header-wrap-logo:hover {
+    filter: brightness(105%)
+}
+
+.Header-wrap-logo:active {
+    filter: brightness(90%);
+    transform: translateY(1px);
+    cursor: pointer
+}
+
+body.ja .language {
+    display: none
+}
+
+body.en .Header-wrap-segalogo {
+    top: 30px
+}
+
+body.en .language {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 60px;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    z-index: 200
+}
+
+body.en .language .languagetext {
+    display: flex;
+    height: 100%;
+    flex: 2;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    color: #fff;
+    padding: 0 5px
+}
+
+body.en .language .languagelink {
+    flex: 1
+}
+
+body.en .language .languagelink a {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #000;
+    padding: 0 20px;
+    text-decoration: underline
+}
+
+.this-file {
+    content: "components/chuniHeader/style.scss"
+}
+
+.chuniLabel {
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: left;
+    color: #fff;
+    text-align: center;
+    margin: 20px 0 10px
+}
+
+.chuniLabel-text {
+    width: 100%;
+    height: auto;
+    padding: 5px 20px;
+    background-color: #004884;
+    background-size: 40%;
+    background-repeat: repeat
+}
+
+.chuniLabel.title {
+    display: inline-block;
+    width: auto;
+    font-size: 30px;
+    font-weight: 700
+}
+
+.chuniLabel.title > div {
+    background-size: 50%
+}
+
+.chuniLabel.title:first-child {
+    font-size: 24px;
+    margin: 0 auto 20px
+}
+
+.chuniLabel .evo {
+    background-color: #e00f5a
+}
+
+.this-file {
+    content: "components/chuniLabel/style.scss"
+}
+
+.LatestNews-inner {
+    display: flex;
+    width: 100%;
+    height: auto;
+    margin: 50px 0 20px
+}
+
+@media screen and (min-width: 601px) {
+    .LatestNews-inner {
+        justify-content: center
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .LatestNews-inner {
+        display: flex;
+        flex-wrap: nowrap;
+        padding: 20px 20px 0;
+        margin: 0 auto 20px;
+        overflow-y: hidden;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        overflow-scrolling: touch;
+        scroll-behavior: smooth
+    }
+
+    .LatestNews-inner::-webkit-scrollbar {
+        width: 5px;
+        background-color: transparent
+    }
+
+    .LatestNews-inner::-webkit-scrollbar-thumb {
+        border-radius: 5px;
+        width: 5px;
+        background-color: hsla(0, 0%, 100%, .3)
+    }
+
+    .LatestNews-inner:after {
+        content: "";
+        display: block;
+        width: 1px;
+        height: 1px;
+        padding: 20px
+    }
+}
+
+.LatestNews-box {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin: 5px
+}
+
+@media screen and (min-width: 601px) {
+    .LatestNews-box {
+        width: 316px;
+        height: 307px;
+        padding: 22px 0 0;
+        background-image: url(./assets/chuniLatestNews/newsbg.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50%
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .LatestNews-box {
+        width: 253px;
+        height: 233.5px;
+        padding: 10px 0 0;
+        background-image: url(./assets/chuniLatestNews/newsbg_sp.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50%
+    }
+}
+
+.LatestNews-box-thumbnail {
+    width: 270px;
+    height: 152px;
+    margin: 5px auto;
+    border: 2px solid #fff;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 50%
+}
+
+@media screen and (min-width: 601px) {
+    .LatestNews-box-thumbnail {
+        image-rendering: -webkit-optimize-contrast
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .LatestNews-box-thumbnail {
+        width: 216px;
+        height: 121.6px
+    }
+}
+
+.LatestNews-box-title {
+    width: 270px;
+    height: 7em;
+    padding: 5px;
+    text-align: left;
+    line-height: 1.6;
+    font-size: 15px;
+    overflow-y: hidden
+}
+
+@media screen and (max-width: 600px) {
+    .LatestNews-box-title {
+        font-size: 13px;
+        padding: 0 30px;
+        overflow-y: hidden;
+        height: 4.5em
+    }
+}
+
+.LatestNews-box .CommonBox {
+    height: 100%
+}
+
+.LatestNews-box .CommonBox-inner-text {
+    padding: 25px 10px 10px
+}
+
+.this-file {
+    content: "components/chuniLatestNews/style.scss"
+}
+
+.MainBg-line:nth-child(7) {
+    display: block;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 500px;
+    height: 40px;
+    background-image: url(./assets/chuniMainContents/pc/line1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 0;
+    transform-origin: bottom right;
+    opacity: 0;
+    animation: fade 22s infinite, line1 22s steps(20) infinite;
+    animation-delay: 0s;
+    pointer-events: none;
+    transform: translateX(0) translateY(0) rotate(0deg);
+    transform-origin: top right
+}
+
+.MainBg-line:nth-child(8) {
+    top: 18%;
+    left: 2%;
+    animation: fade 22s infinite, line1 22s steps(20) infinite;
+    animation-delay: -5s
+}
+
+.MainBg-line:nth-child(8), .MainBg-line:nth-child(9) {
+    display: block;
+    position: absolute;
+    width: 500px;
+    height: 40px;
+    background-image: url(./assets/chuniMainContents/pc/line2.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 0;
+    transform: translateX(0) translateY(0) rotate(0deg);
+    transform-origin: bottom right;
+    opacity: 0;
+    pointer-events: none
+}
+
+.MainBg-line:nth-child(9) {
+    top: 50%;
+    left: 0;
+    animation: fade 22s infinite, line1 22s steps(20) infinite;
+    animation-delay: -11.5s
+}
+
+.MainBg-line:nth-child(10) {
+    top: 47%;
+    left: 50%;
+    background-image: url(./assets/chuniMainContents/pc/line1.png);
+    animation: fade 22s infinite, line1_left 22s steps(20) infinite;
+    animation-delay: -2s;
+    filter: hue-rotate(209deg) brightness(160%)
+}
+
+.MainBg-line:nth-child(10), .MainBg-line:nth-child(11) {
+    display: block;
+    position: absolute;
+    width: 500px;
+    height: 40px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 0;
+    transform-origin: bottom right;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(0) translateY(0) rotate(0deg);
+    transform-origin: top right
+}
+
+.MainBg-line:nth-child(11) {
+    top: 20%;
+    left: 35%;
+    background-image: url(./assets/chuniMainContents/pc/line2.png);
+    animation: fade 22s infinite, line1_left 22s steps(20) infinite;
+    animation-delay: -14s
+}
+
+.MainBg-line:nth-child(12) {
+    top: 60%;
+    left: 45%;
+    animation: fade 22s infinite, line1_left 22s steps(20) infinite;
+    animation-delay: -6.5s;
+    filter: hue-rotate(209deg) brightness(160%)
+}
+
+.MainBg-line:nth-child(12), .MainBg-line:nth-child(13) {
+    display: block;
+    position: absolute;
+    width: 500px;
+    height: 40px;
+    background-image: url(./assets/chuniMainContents/pc/line1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 0;
+    transform: translateX(0) translateY(0) rotate(0deg);
+    transform-origin: bottom right;
+    opacity: 0;
+    pointer-events: none
+}
+
+.MainBg-line:nth-child(13) {
+    top: 50%;
+    left: 55%;
+    animation: fade 22s infinite, line1 22s steps(20) infinite;
+    animation-delay: 15s;
+    transform-origin: top right
+}
+
+.MainBg-line:nth-child(14) {
+    display: block;
+    position: absolute;
+    top: 80%;
+    left: -15%;
+    width: 500px;
+    height: 40px;
+    background-image: url(./assets/chuniMainContents/pc/line1.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 0;
+    transform-origin: bottom right;
+    opacity: 0;
+    animation: fade 22s infinite, line1_left 22s steps(20) infinite;
+    animation-delay: .5s;
+    pointer-events: none;
+    transform: translateX(0) translateY(0) rotate(0deg);
+    transform-origin: top right
+}
+
+@keyframes line1 {
+    0% {
+        background-position: 0 0;
+        transform: translateX(0) translateY(0) rotate(5deg)
+    }
+    79% {
+        background-position: 0 0;
+        transform: translateX(0) translateY(0) rotate(5deg)
+    }
+    80% {
+        background-position: 0 0;
+        transform: translateX(0) translateY(0) rotate(5deg)
+    }
+    95% {
+        background-position: 0 -1600px;
+        transform: translateX(200px) translateY(200px) rotate(10deg)
+    }
+    to {
+        background-position: 0 -1600px;
+        transform: translateX(200px) translateY(200px) rotate(10deg)
+    }
+}
+
+@keyframes line1_left {
+    0% {
+        background-position: 0 0;
+        transform: rotate(195deg) translateX(0) translateY(-5px)
+    }
+    79% {
+        background-position: 0 0;
+        transform: rotate(195deg) translateX(0) translateY(-5px)
+    }
+    80% {
+        background-position: 0 0;
+        transform: rotate(195deg) translateX(0) translateY(-5px)
+    }
+    95% {
+        background-position: 0 -1600px;
+        transform: rotate(205deg) translateX(200px) translateY(-10px)
+    }
+    to {
+        background-position: 0 -1600px;
+        transform: rotate(205deg) translateX(200px) translateY(-10px)
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0
+    }
+    79% {
+        opacity: 0
+    }
+    80% {
+        opacity: 1
+    }
+    95% {
+        opacity: 1
+    }
+    to {
+        opacity: 0
+    }
+}
+
+.MainBg-ink {
+    display: block;
+    position: absolute;
+    top: 300px;
+    left: 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 0;
+    transform: translateX(0);
+    opacity: 0;
+    animation: ink-fade 20s infinite, ink1 20s infinite;
+    pointer-events: none
+}
+
+@media screen and (min-width: 601px) {
+    .MainBg-ink {
+        width: 400px;
+        height: 400px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .MainBg-ink {
+        width: 200px;
+        height: 200px
+    }
+}
+
+.MainBg-ink:first-child {
+    top: 8%;
+    left: 5%;
+    animation-delay: 1s;
+    background-image: url(./assets/chuniMainContents/pc/ink2.png)
+}
+
+@media screen and (max-width: 600px) {
+    .MainBg-ink:first-child {
+        top: 8% -5%;
+        left: -10%
+    }
+}
+
+.MainBg-ink:nth-child(3) {
+    top: 25%;
+    left: 0;
+    animation-delay: 2s;
+    background-image: url(./assets/chuniMainContents/pc/ink3.png)
+}
+
+@media screen and (max-width: 600px) {
+    .MainBg-ink:nth-child(3) {
+        top: 25% -5%;
+        left: -15%
+    }
+}
+
+.MainBg-ink:nth-child(4) {
+    top: 55%;
+    left: -2%;
+    animation-delay: 15s;
+    background-image: url(./assets/chuniMainContents/pc/ink1.png)
+}
+
+@media screen and (max-width: 600px) {
+    .MainBg-ink:nth-child(4) {
+        top: 55% -5%;
+        left: -17%
+    }
+}
+
+.MainBg-ink:nth-child(2) {
+    top: 50%;
+    left: 75%;
+    animation-delay: 3s;
+    background-image: url(./assets/chuniMainContents/pc/ink1.png)
+}
+
+@media screen and (max-width: 600px) {
+    .MainBg-ink:nth-child(2) {
+        top: 50% -5%;
+        left: 60%
+    }
+}
+
+.MainBg-ink:nth-child(5) {
+    top: 18%;
+    left: 80%;
+    animation-delay: 12s;
+    background-image: url(./assets/chuniMainContents/pc/ink3.png)
+}
+
+@media screen and (max-width: 600px) {
+    .MainBg-ink:nth-child(5) {
+        top: 18% -5%;
+        left: 65%
+    }
+}
+
+.MainBg-ink:nth-child(6) {
+    top: 30%;
+    left: 70%;
+    animation-delay: 8s;
+    background-image: url(./assets/chuniMainContents/pc/ink2.png)
+}
+
+@media screen and (max-width: 600px) {
+    .MainBg-ink:nth-child(6) {
+        top: 30% -5%;
+        left: 55%
+    }
+}
+
+@keyframes ink1 {
+    0% {
+        transform: scale(.9)
+    }
+    1% {
+        transform: scale(1)
+    }
+    to {
+        transform: scale(1)
+    }
+}
+
+@keyframes ink-fade {
+    0% {
+        opacity: .7
+    }
+    10% {
+        opacity: .7
+    }
+    50% {
+        opacity: 0
+    }
+    to {
+        opacity: 0
+    }
+}
+
+body {
+    background: #fff
+}
+
+.MainBg_wrapper {
+    position: fixed;
+    z-index: 0
+}
+
+.MainBg, .MainBg_wrapper {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none
+}
+
+.MainBg {
+    z-index: 1;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-image: url(./assets/chuniMainContents/pc/bg.jpg)
+}
+
+.MainBg, .MainBg:before {
+    position: absolute;
+    display: block
+}
+
+.MainBg:before {
+    content: "";
+    width: 100%;
+    height: 200px;
+    top: 0;
+    right: 0
+}
+
+@media screen and (min-width: 601px) {
+    .MainBg:before {
+        background-image: url(./assets/chuniMainContents/pc/bg_red.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 100% 0
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .MainBg:before {
+        background-image: url(./assets/chuniMainContents/sp/bg_red.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 100% 0
+    }
+}
+
+.MainBg:after {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    left: 0
+}
+
+@media screen and (min-width: 601px) {
+    .MainBg:after {
+        background-image: url(./assets/chuniMainContents/pc/bg_blue.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 0 100%
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .MainBg:after {
+        background-image: url(./assets/chuniMainContents/sp/bg_blue.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 0 100%
+    }
+}
+
+@media screen and (min-width: 601px) and (min-width: 601px) {
+    .Main[data-page=about] {
+        margin: -100px auto 0;
+        padding-top: 100px
+    }
+}
+
+@media screen and (min-width: 601px) and (min-width: 601px) {
+    .Main[data-page=root] {
+        overflow-x: auto;
+        margin: -100px auto 0;
+        padding: 0
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .MainContents {
+        width: 100%;
+        min-height: 65vh;
+        padding: 0
+    }
+
+    .MainContents-wrap {
+        display: block;
+        position: relative;
+        z-index: 1;
+        max-width: 1000px;
+        margin: 30px auto;
+        padding: 0
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 600px) {
+    .MainContents-wrap {
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        min-width: 400px
+    }
+}
+
+@media screen and (max-width: 600px) and (max-width: 600px) {
+    .Main[data-page=root] {
+        overflow-x: auto;
+        margin: -110px auto 0
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .MainContents {
+        margin: 0 auto
+    }
+
+    .MainContents-wrap {
+        position: relative;
+        z-index: 1
+    }
+
+    .MainContents-wrap[data-page=root] {
+        z-index: 0
+    }
+}
+
+.this-file {
+    content: "components/chuniMainContents/style.scss";
+    content: "components/chuniMusicMenu/style.scss"
+}
+
+.ChuniMusicMenuSp {
+    position: relative
+}
+
+.ChuniMusicMenuSp-spMenu {
+    position: relative;
+    width: 90%;
+    margin: 0 auto 10px;
+    padding: 23px 0 20px;
+    text-align: center;
+    background: hsla(0, 0%, 100%, .5);
+    border: 2px solid #0a99af
+}
+
+.ChuniMusicMenuSp-spMenu-title {
+    position: absolute;
+    top: -15px;
+    left: 0;
+    right: 0;
+    display: block;
+    width: 250px;
+    margin: 0 auto 10px;
+    background: #0a99af;
+    border-radius: 20px;
+    color: #fff;
+    font-weight: 700;
+    text-align: center
+}
+
+.ChuniMusicMenuSp .ChuniSelect {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left
+}
+
+.this-file {
+    content: "components/chuniMusicMenuSp/style.scss"
+}
+
+.NewIcon {
+    position: absolute;
+    width: 125.3px;
+    height: 30.8px;
+    top: -12px;
+    left: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding: 1px 10px;
+    font-size: 14px;
+    font-weight: 700;
+    background-image: url(./assets/chuniNewIcon/new_bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: 13
+}
+
+@media screen and (max-width: 600px) {
+    .NewIcon {
+        width: 107px;
+        height: 27px;
+        top: -5px;
+        left: -11px;
+        background-image: url(./assets/chuniNewIcon/new_bg_sp.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        font-size: 12px
+    }
+}
+
+.this-file {
+    content: "components/chuniNewIcon/style.scss"
+}
+
+.chuniNewMusicList {
+    display: block;
+    position: relative;
+    width: 311px;
+    height: 160px;
+    background-image: url(./assets/chuniNewMusicList/newlist.png);
+    background-repeat: no-repeat;
+    background-size: contain
+}
+
+@media screen and (min-width: 601px) {
+    .chuniNewMusicList {
+        margin-left: -23px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .chuniNewMusicList {
+        width: 222px;
+        height: 110px;
+        background-image: url(./assets/chuniNewMusicList/sp_newlist.png);
+        background-repeat: no-repeat;
+        background-size: contain
+    }
+}
+
+.chuniNewMusicList {
+    opacity: 0;
+    pointer-events: none
+}
+
+.chuniNewMusicList.show {
+    opacity: 1;
+    pointer-events: all
+}
+
+.chuniNewMusicList a {
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+.chuniNewMusicList {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.chuniNewMusicList:hover {
+    filter: brightness(110%);
+    cursor: pointer
+}
+
+.chuniNewMusicList:active {
+    filter: brightness(98%);
+    transform: translateY(1px)
+}
+
+.chuniNewMusicList:hover {
+    transform: translateY(-1px)
+}
+
+.chuniNewMusicList:active {
+    transform: translateY(0)
+}
+
+.chuniNewMusicList-penguin {
+    display: block;
+    position: absolute;
+    background-image: url(./assets/chuniNewMusicList/newicon.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+    pointer-events: none;
+    animation: penguin .5s infinite;
+    transform-origin: bottom center
+}
+
+@media screen and (min-width: 601px) {
+    .chuniNewMusicList-penguin {
+        width: 200px;
+        height: 200px;
+        top: -34px;
+        left: -35px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .chuniNewMusicList-penguin {
+        width: 125px;
+        height: 125px;
+        top: -19px;
+        left: -11px
+    }
+}
+
+.chuniNewMusicList-text {
+    display: block;
+    position: absolute;
+    width: 169px;
+    height: 77px;
+    top: 62px;
+    right: -8px;
+    padding: 0;
+    margin: auto 0 auto auto;
+    font-size: 32px;
+    font-weight: 700;
+    font-family: Noto Sans JP, sans-serif;
+    font-style: italic;
+    line-height: 1.1;
+    text-align: left;
+    color: #2b343b
+}
+
+.chuniNewMusicList-text span {
+    font-size: 20px
+}
+
+@media screen and (max-width: 600px) {
+    .chuniNewMusicList-text {
+        width: 118.3px;
+        height: 53.9px;
+        top: 43.4px;
+        right: .6px;
+        font-size: 22px
+    }
+}
+
+@keyframes penguin {
+    0% {
+        transform: translateY(0)
+    }
+    50% {
+        transform: translateY(-1px)
+    }
+    to {
+        transform: translateY(0)
+    }
+}
+
+.chuniNewMusicList-penguin .Sprite {
+    display: block;
+    position: absolute;
+    font-size: 60px
+}
+
+.chuniNewMusicList-penguin .Sprite:first-child {
+    animation: rhythm-note1 .5s -.25s infinite
+}
+
+@media screen and (min-width: 601px) {
+    .chuniNewMusicList-penguin .Sprite:first-child {
+        top: 60px;
+        left: 10px;
+        font-size: 50px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .chuniNewMusicList-penguin .Sprite:first-child {
+        top: 60px;
+        left: 10px;
+        font-size: 40px
+    }
+}
+
+.chuniNewMusicList-penguin .Sprite:nth-child(2) {
+    animation: rhythm-note1 .5s -.25s infinite
+}
+
+@media screen and (min-width: 601px) {
+    .chuniNewMusicList-penguin .Sprite:nth-child(2) {
+        top: 30px;
+        left: 140px;
+        font-size: 40px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .chuniNewMusicList-penguin .Sprite:nth-child(2) {
+        top: 9px;
+        left: 80px;
+        font-size: 30px
+    }
+}
+
+.chuniNewMusicList-penguin .Sprite:nth-child(3) {
+    animation: rhythm-note2 .5s infinite
+}
+
+@media screen and (min-width: 601px) {
+    .chuniNewMusicList-penguin .Sprite:nth-child(3) {
+        top: 2px;
+        left: 50px;
+        font-size: 50px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .chuniNewMusicList-penguin .Sprite:nth-child(3) {
+        top: 22px;
+        left: 30px;
+        font-size: 30px
+    }
+}
+
+.chuniNewMusicList-penguin .Sprite:nth-child(4) {
+    animation: rhythm-note2 .5s infinite
+}
+
+@media screen and (min-width: 601px) {
+    .chuniNewMusicList-penguin .Sprite:nth-child(4) {
+        top: 124px;
+        left: 120px;
+        font-size: 52px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .chuniNewMusicList-penguin .Sprite:nth-child(4) {
+        top: 75px;
+        left: 72px;
+        font-size: 35px
+    }
+}
+
+@keyframes rhythm-note1 {
+    0% {
+        transform: rotate(0) scale(1)
+    }
+    50% {
+        transform: rotate(-20deg) scale(.85)
+    }
+    to {
+        transform: rotate(0) scale(1)
+    }
+}
+
+@keyframes rhythm-note2 {
+    0% {
+        transform: rotate(0) scale(1)
+    }
+    50% {
+        transform: rotate(20deg) scale(.85)
+    }
+    to {
+        transform: rotate(0) scale(1)
+    }
+}
+
+.this-file {
+    content: "components/chuniNewMusicList/style.scss"
+}
+
+.OtherSiteBanner {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 0;
+    background: rgba(0, 0, 0, .7)
+}
+
+@media screen and (min-width: 601px) {
+    .OtherSiteBanner {
+        padding: 20px 0
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .OtherSiteBanner {
+        width: 100%;
+        min-width: auto;
+        margin: 0 auto;
+        padding: 20px 10px
+    }
+}
+
+.OtherSiteBanner li {
+    display: inline-block;
+    width: 240px;
+    height: 78px;
+    margin: 8px 6px;
+    border-radius: 4px;
+    background-image: url(https://chunithm.sega.jp/bnr_otogames/bnr_otogames.jpg);
+    background-repeat: no-repeat;
+    background-size: 500% 100%;
+    box-shadow: 0 0 0 2px #fff, 0 0 4px 2px #000
+}
+
+@media screen and (max-width: 600px) {
+    .OtherSiteBanner li {
+        width: 168px;
+        height: 54.6px
+    }
+}
+
+.OtherSiteBanner li:first-child {
+    background-position: 0
+}
+
+@media screen and (max-width: 600px) {
+    .OtherSiteBanner li:first-child {
+        background-position: 0 0
+    }
+}
+
+.OtherSiteBanner li:nth-child(3) {
+    background-position: -480px 0
+}
+
+@media screen and (max-width: 600px) {
+    .OtherSiteBanner li:nth-child(3) {
+        background-position: -336px 0
+    }
+}
+
+.OtherSiteBanner li:nth-child(2) {
+    background-position: -720px 0
+}
+
+@media screen and (max-width: 600px) {
+    .OtherSiteBanner li:nth-child(2) {
+        background-position: -504px 0
+    }
+}
+
+.OtherSiteBanner li:nth-child(4) {
+    background-position: -960px 0
+}
+
+@media screen and (max-width: 600px) {
+    .OtherSiteBanner li:nth-child(4) {
+        background-position: -672px 0
+    }
+}
+
+.OtherSiteBanner li:nth-child(5) {
+    display: block;
+    width: 490px;
+    height: 75px;
+    background: url(./assets/chuniOtherSiteBanner/gekichumai.png);
+    margin: 15px auto
+}
+
+@media screen and (max-width: 600px) {
+    .OtherSiteBanner li:nth-child(5) {
+        width: 97%;
+        height: 0;
+        margin: 8px auto;
+        padding-bottom: 15%;
+        background-size: contain;
+        background-repeat: no-repeat
+    }
+}
+
+.OtherSiteBanner li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: transparent;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 0
+}
+
+.OtherSiteBanner li:hover {
+    filter: brightness(103%)
+}
+
+.OtherSiteBanner li:active {
+    filter: brightness(94%);
+    transform: translateY(1px);
+    cursor: pointer
+}
+
+.this-file {
+    content: "components/chuniOtherSiteBanner/style.scss"
+}
+
+.PageTitleBar {
+    display: block;
+    position: relative;
+    overflow: hidden
+}
+
+@media screen and (min-width: 601px) {
+    .PageTitleBar {
+        width: 1008px;
+        height: 70px;
+        margin: 20px auto 50px;
+        background-image: url(./assets/chuniPageTitleBar/pagetitlebar.png);
+        background-repeat: no-repeat;
+        background-size: contain
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .PageTitleBar {
+        width: 383.5px;
+        height: 50.5px;
+        overflow: visible;
+        margin: 20px auto 3em;
+        background-image: url(./assets/chuniPageTitleBar/sp_pagetitlebar.png);
+        background-repeat: no-repeat;
+        background-size: contain
+    }
+}
+
+.PageTitleBar-inner {
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    font-family: Noto Sans JP, sans-serif;
+    color: #fff;
+    font-style: italic
+}
+
+.PageTitleBar-inner-text {
+    margin-left: 2em;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    padding-right: .5em;
+    padding-bottom: .2em
+}
+
+@media screen and (max-width: 600px) {
+    .PageTitleBar-inner-text {
+        font-size: 20px
+    }
+}
+
+.PageTitleBar-inner-en {
+    display: inline-block;
+    padding: .3em 0 0;
+    font-size: 20px;
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif
+}
+
+@media screen and (max-width: 600px) {
+    .PageTitleBar-inner-en {
+        font-size: 16px
+    }
+}
+
+.PageTitleBar-breadcrumbs {
+    display: inline-block;
+    position: absolute;
+    top: auto;
+    bottom: 20px;
+    right: 75px;
+    margin: auto 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 480px;
+    height: 1.2em;
+    overflow: hidden;
+    line-height: 1.2;
+    color: #fff;
+    font-size: 85%;
+    text-align: left
+}
+
+@media screen and (max-width: 600px) {
+    .PageTitleBar-breadcrumbs {
+        position: absolute;
+        top: auto;
+        left: 0;
+        right: auto;
+        bottom: -1.3em;
+        margin: 0;
+        padding: 0 3px;
+        font-size: 80%;
+        max-width: 380px;
+        text-align: left
+    }
+}
+
+.PageTitleBar-crumb:not(:first-child):before {
+    content: "›";
+    display: inline-block;
+    margin: 0 1ex
+}
+
+.this-file {
+    content: "components/chuniPageTitleBar/style.scss"
+}
+
+.chuniPlayerBox {
+    position: relative
+}
+
+@media screen and (min-width: 601px) {
+    .chuniPlayerBox {
+        width: 800px;
+        margin: 50px auto;
+        font-size: 20px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .chuniPlayerBox {
+        width: 95%;
+        margin: 50px auto;
+        font-size: 16px
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .chuniPlayerBox-inner {
+        width: 600px;
+        margin: 0 auto
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .chuniPlayerBox-inner {
+        width: 100%
+    }
+}
+
+.chuniPlayerBox-inner img {
+    border: 8px solid #fff;
+    box-shadow: 0 0 13px #878787
+}
+
+.chuniPlayerBox-penguin {
+    position: absolute
+}
+
+@media screen and (min-width: 601px) {
+    .chuniPlayerBox-penguin {
+        top: 140px;
+        right: -30px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .chuniPlayerBox-penguin {
+        top: 75px;
+        right: 8px;
+        width: 115px
+    }
+}
+
+.chuniPlayerBox ul {
+    margin: 20px 0 10px;
+    font-weight: 700
+}
+
+.chuniPlayerBox-redBig {
+    color: #e54c4a
+}
+
+@media screen and (min-width: 601px) {
+    .chuniPlayerBox-redBig {
+        font-size: 23px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .chuniPlayerBox-redBig {
+        font-size: 19px
+    }
+}
+
+.chuniPlayerBox-greenBig {
+    color: #36b050
+}
+
+@media screen and (min-width: 601px) {
+    .chuniPlayerBox-greenBig {
+        font-size: 23px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .chuniPlayerBox-greenBig {
+        font-size: 19px
+    }
+}
+
+.chuniPlayerBox-blueBig {
+    color: #36b0f0
+}
+
+@media screen and (min-width: 601px) {
+    .chuniPlayerBox-blueBig {
+        font-size: 23px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .chuniPlayerBox-blueBig {
+        font-size: 19px
+    }
+}
+
+.type1, .type2, .type3 {
+    margin: -45px auto 0
+}
+
+.type1 strong, .type2 strong, .type3 strong {
+    display: block;
+    margin: 10px 0
+}
+
+@media screen and (max-width: 600px) {
+    .type1 strong, .type2 strong, .type3 strong {
+        margin: 10px 4px 20px
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .type1 {
+        width: 600px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .type1 {
+        width: 90%
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .type2 {
+        width: 700px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .type2 {
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .type2 .chuniPlayerBox-inner {
+        width: 49%
+    }
+
+    .type2 .chuniPlayerBox-penguin {
+        width: 225px
+    }
+}
+
+.type3 {
+    display: flex
+}
+
+.type3 > * {
+    flex: 1
+}
+
+@media screen and (min-width: 601px) {
+    .type3 {
+        width: 700px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .type3 {
+        width: 100%
+    }
+}
+
+.type3 .rightText {
+    font-weight: 700
+}
+
+@media screen and (min-width: 601px) {
+    .type3 .rightText {
+        margin: 70px 0 0
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .type3 .rightText {
+        margin: 50px 0 0 10px
+    }
+}
+
+.type3 .rightText ul {
+    margin: 30px 0 20px;
+    font-size: 17px
+}
+
+.this-file {
+    content: "components/chuniPlayerBox/style.scss"
+}
+
+.SearchStore {
+    display: block;
+    position: relative
+}
+
+@media screen and (min-width: 601px) {
+    .SearchStore {
+        width: 1006px;
+        height: 174px;
+        padding: 22px 0 0 359px;
+        margin: 0 auto 30px;
+        background-image: url(./assets/chuniSearchStore/pc/search.png);
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: contain
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .SearchStore {
+        width: 390px;
+        height: 269px;
+        padding: 57px 0 0;
+        margin: 18px auto 30px;
+        background-image: url(./assets/chuniSearchStore/sp/search.png);
+        background-repeat: no-repeat;
+        background-position: 50%;
+        background-size: contain
+    }
+}
+
+.SearchStore-box {
+    display: flex;
+    text-align: right;
+    position: absolute;
+    bottom: 11px;
+    right: 44px
+}
+
+@media screen and (max-width: 600px) {
+    .SearchStore-box {
+        display: block;
+        position: static;
+        width: 100%;
+        margin: 0 auto
+    }
+}
+
+.SearchStore-box-area, .SearchStore-box-location {
+    display: inline-block;
+    position: relative;
+    width: 313px;
+    height: 131px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+    margin: 0 5px;
+    padding: 8px 0;
+    text-align: center;
+    color: transparent;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 0
+}
+
+@media screen and (min-width: 601px) {
+    .SearchStore-box-area .selectbtn, .SearchStore-box-location .selectbtn {
+        display: inline-block;
+        position: absolute;
+        top: 64px;
+        left: 197px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .SearchStore-box-area .selectbtn, .SearchStore-box-location .selectbtn {
+        display: inline-block;
+        position: absolute;
+        top: 32px;
+        left: 260px
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .SearchStore-box-area .selectbox, .SearchStore-box-location .selectbox {
+        display: inline-block;
+        position: absolute;
+        top: 66px;
+        left: 51px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .SearchStore-box-area .selectbox, .SearchStore-box-location .selectbox {
+        display: inline-block;
+        position: absolute;
+        top: 33px;
+        left: 149px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .SearchStore-box-area, .SearchStore-box-location {
+        display: block;
+        position: relative;
+        width: 347px;
+        height: 94.5px;
+        margin: 0 auto 10px;
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: left
+    }
+
+    .SearchStore-box-area-inner, .SearchStore-box-location-inner {
+        display: flex
+    }
+}
+
+.SearchStore-box-area h3, .SearchStore-box-location h3 {
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0 auto 10px;
+    line-height: 1.2
+}
+
+@media screen and (max-width: 600px) {
+    .SearchStore-box-area h3, .SearchStore-box-location h3 {
+        letter-spacing: -2px;
+        font-size: 18px;
+        padding: 2px 5px 2px 10px;
+        margin: 0;
+        text-align: left;
+        display: block
+    }
+}
+
+.SearchStore-box-area button, .SearchStore-box-location button {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.SearchStore-box-area button:hover, .SearchStore-box-location button:hover {
+    filter: brightness(110%);
+    cursor: pointer
+}
+
+.SearchStore-box-area button:active, .SearchStore-box-location button:active {
+    filter: brightness(98%);
+    transform: translateY(1px)
+}
+
+@media screen and (max-width: 600px) {
+    .SearchStore-box-area button, .SearchStore-box-location button {
+        font-size: 18px
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .SearchStore-box-location {
+        background-image: url(./assets/chuniSearchStore/pc/bace.png)
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .SearchStore-box-location {
+        background-image: url(./assets/chuniSearchStore/sp/bace.png)
+    }
+}
+
+@media screen and (min-width: 601px) {
+    .SearchStore-box-area {
+        background-image: url(./assets/chuniSearchStore/pc/bace2.png)
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .SearchStore-box-area {
+        background-image: url(./assets/chuniSearchStore/sp/bace2.png)
+    }
+}
+
+.SearchStore-box .shopList {
+    display: block;
+    width: 180px;
+    height: 42px;
+    position: absolute;
+    background-image: url(./assets/chuniSearchStore/pc/area_btn.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    top: 66px;
+    left: 64px;
+    box-shadow: 3px 3px 0 #ccc;
+    color: transparent;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 0
+}
+
+.SearchStore-box .shopList:hover {
+    box-shadow: none;
+    transform: translate(1px, 1px)
+}
+
+@media screen and (max-width: 600px) {
+    .SearchStore-box .shopList {
+        top: 30px;
+        left: 140px;
+        width: 175px;
+        height: 42.5px;
+        margin-left: 15px;
+        background-image: url(./assets/chuniSearchStore/sp/area_btn.png)
+    }
+}
+
+.SearchStore-box .shopInput {
+    display: block;
+    width: 105px;
+    height: 40px;
+    border: 1px solid #f5216d;
+    text-align: center;
+    padding: 3px 1px 0;
+    margin: auto 5px;
+    font-weight: 700;
+    background: #fff;
+    color: #f5216d
+}
+
+@media screen and (min-width: 601px) {
+    .SearchStore-box .shopInput {
+        font-size: 21px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .SearchStore-box .shopInput {
+        font-size: 18px
+    }
+}
+
+.SearchStore-box .shopSubmit {
+    display: block;
+    width: 70px;
+    height: 42px;
+    padding: 5px 15px;
+    background-image: url(./assets/chuniSearchStore/pc/search_btn.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: transparent;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 0;
+    box-shadow: 3px 3px 0 #ccc
+}
+
+.SearchStore-box .shopSubmit:hover {
+    box-shadow: none;
+    transform: translate(1px, 1px)
+}
+
+@media screen and (max-width: 600px) {
+    .SearchStore-box .shopSubmit {
+        margin-left: 6px;
+        width: 65px;
+        height: 42.5px;
+        margin-left: 5px;
+        background-image: url(./assets/chuniSearchStore/sp/search_btn.png)
+    }
+}
+
+.this-file {
+    content: "components/chuniSearchStore/style.scss"
+}
+
+.ChuniSelect {
+    color: #2b343b;
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 42px;
+    border-radius: 6px;
+    box-shadow: 0 0 4px 2px rgba(34, 35, 90, .5)
+}
+
+.ChuniSelect-text {
+    position: relative;
+    z-index: 1;
+    height: 42px;
+    padding: 0 3em 0 0;
+    border: 2px solid #fff;
+    background-color: #2b343b;
+    color: #fff;
+    line-height: 42px;
+    font-weight: 700;
+    font-size: 16px;
+    text-align: center;
+    pointer-events: none;
+    overflow: hidden
+}
+
+.ChuniSelect-text-mark {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 100%;
+    background-color: #0a99af;
+    outline: 2px solid #fff
+}
+
+.ChuniSelect-text-mark:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-top-color: #fff;
+    transform: scaleY(1.5) translateY(25%)
+}
+
+.ChuniSelect-select {
+    position: absolute;
+    top: 0;
+    left: 2px;
+    display: block;
+    width: calc(100% - 2px * 2);
+    height: 100%
+}
+
+.Search-bottom .ChuniSelect-text-mark {
+    width: 1.5em;
+    font-size: 16px
+}
+
+.Search-bottom .ChuniSelect-text-mark:before {
+    border: 5px solid transparent;
+    border-top-color: #fff
+}
+
+.this-file {
+    content: "components/chuniSelect/style.scss"
+}
+
+@media screen and (min-width: 601px) {
+    .ChuniSelectAsobikata {
+        margin-bottom: 40px
+    }
+
+    .ChuniSelectAsobikata .SelectAsobikataPC {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        width: 100%
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .ChuniSelectAsobikata {
+        position: relative;
+        background: hsla(0, 0%, 100%, .6);
+        border: 3px solid #0a99af;
+        border-radius: 10px;
+        width: 95%;
+        margin: 0 auto 20px;
+        padding: 25px 10px 15px
+    }
+
+    .ChuniSelectAsobikata:before {
+        content: "カテゴリ選択";
+        position: absolute;
+        top: -15px;
+        left: 0;
+        right: 0;
+        width: 50%;
+        margin: 0 auto;
+        color: #fff;
+        background-color: #0a99af;
+        padding: 2px 20px;
+        border-radius: 20px;
+        text-align: center;
+        font-weight: 700;
+        font-size: 15px
+    }
+
+    .ChuniSelectAsobikata .SelectAsobikataSP {
+        width: 100%
+    }
+}
+
+.ChuniSelectAsobikata .ChuniBtn {
+    background-color: #0a99af;
+    font-size: 19px;
+    width: 18.18182%;
+    height: 4em
+}
+
+.ChuniSelectAsobikata .ChuniBtn-content a {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    white-space: pre-line
+}
+
+.this-file {
+    content: "components/chuniSelectAsobikata/style.scss"
+}
+
+.chuniSelectCharacter {
+    background-color: hsla(0, 0%, 100%, .6);
+    margin: 10px auto;
+    background: hsla(0, 0%, 100%, .6);
+    border: 3px solid #0a99af;
+    border-radius: 10px;
+    width: 95%;
+    margin: 0 auto 20px;
+    padding: 25px 10px 15px;
+    position: relative;
+    display: block;
+    width: 90%;
+    height: 120px;
+    color: transparent;
+    font-size: 26px
+}
+
+.chuniSelectCharacter:before {
+    content: "カテゴリ選択";
+    position: absolute;
+    top: -15px;
+    left: 0;
+    right: 0;
+    width: 50%;
+    margin: 0 auto;
+    background-color: #0a99af;
+    padding: 2px 20px;
+    font-size: 15px
+}
+
+.chuniSelectCharacter-title, .chuniSelectCharacter:before {
+    color: #fff;
+    border-radius: 20px;
+    text-align: center;
+    font-weight: 700
+}
+
+.chuniSelectCharacter-title {
+    display: block;
+    width: 250px;
+    margin: -15px auto 10px;
+    background: #4f1e66;
+    font-size: 20px
+}
+
+.chuniSelectCharacter-text {
+    position: absolute;
+    top: 40px;
+    left: 22px;
+    z-index: 1;
+    width: 90%;
+    height: 3em;
+    line-height: 3em;
+    margin: 0 auto;
+    padding: 0 .5em;
+    background-color: #2b343b;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+    box-shadow: inset 0 0 1px 2px #0a99af, 0 0 1px 1px #fff;
+    pointer-events: none;
+    overflow: hidden
+}
+
+.chuniSelectCharacter-text-mark {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 100%;
+    background-color: #0a99af
+}
+
+.chuniSelectCharacter-text-mark:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: 8px solid transparent;
+    border-top-color: #fff;
+    transform: scaleY(1.5) translateY(25%)
+}
+
+.chuniSelectCharacter-select {
+    position: absolute;
+    top: 40px;
+    left: 22px;
+    display: block;
+    width: calc(100% - 22px * 2);
+    height: 1.8em;
+    margin: 0 auto;
+    color: #999
+}
+
+.this-file {
+    content: "components/chuniSelectCharacter/style.scss"
+}
+
+.icon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    background-image: url(./assets/chuniSNS/sns_icon.png);
+    background-size: 300% 100%;
+    box-shadow: inset 0 0 0 2px #fff;
+    border-radius: 10px;
+    font-size: 16px;
+    overflow: hidden;
+    color: transparent;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 0
+}
+
+.icon:hover {
+    filter: brightness(120%)
+}
+
+.icon:active {
+    filter: brightness(90%);
+    transform: translateY(1px);
+    cursor: pointer
+}
+
+.Flex.SNS {
+    position: absolute;
+    top: -120px;
+    left: 0;
+    right: 0;
+    margin: auto
+}
+
+@media screen and (max-width: 600px) {
+    .Flex.SNS {
+        top: -60px;
+        display: flex
+    }
+}
+
+.SNS-wrapper {
+    display: block;
+    position: relative;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translateX(-300%);
+    opacity: 0;
+    z-index: 10
+}
+
+@media screen and (min-width: 601px) {
+    .SNS-wrapper {
+        width: 600px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .SNS-wrapper {
+        width: 100%
+    }
+}
+
+.SNS-wrapper.show {
+    transform: translateX(-300%);
+    animation: snscar 1s cubic-bezier(.62, .15, .66, 1.37) both
+}
+
+.SNS {
+    display: block;
+    position: relative;
+    width: 533px;
+    height: 170px;
+    margin: 120px auto -30px;
+    padding: 0;
+    background-image: url(./assets/chuniSNS/sns_bg.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    animation: car .3s infinite
+}
+
+@media screen and (max-width: 600px) {
+    .SNS {
+        width: 380px;
+        margin: 0 auto 20px;
+        padding: 0 55px 0 0
+    }
+}
+
+.SNS:before {
+    display: block;
+    position: absolute;
+    content: "";
+    width: 289px;
+    height: 120px;
+    z-index: -1;
+    background-image: url(./assets/chuniSNS/share.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 0;
+    transform-origin: bottom center;
+    animation: share .3s 1s cubic-bezier(.62, .15, .66, 1.37) both
+}
+
+@media screen and (min-width: 601px) {
+    .SNS:before {
+        top: -100px;
+        left: 160px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .SNS:before {
+        top: -100px;
+        right: 0
+    }
+}
+
+.SNS:after {
+    display: block;
+    position: absolute;
+    content: "";
+    top: -20px;
+    left: -240px;
+    width: 292px;
+    height: 200px;
+    z-index: -1;
+    background-image: url(./assets/chuniSNS/smoke.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: 0 0;
+    animation: smoke .8s steps(4) infinite
+}
+
+.SNS .Flex-box {
+    margin-top: 85px;
+    cursor: pointer
+}
+
+@media screen and (max-width: 600px) {
+    .SNS .Flex-box {
+        margin: 40px 5px 0
+    }
+}
+
+.SNS .Flex-box a {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%
+}
+
+.SNS-tw {
+    background-position: -100% 0;
+    position: absolute
+}
+
+@media screen and (min-width: 601px) {
+    .SNS-tw {
+        top: 10px;
+        left: 265px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .SNS-tw {
+        top: 20px;
+        left: 175px
+    }
+}
+
+.SNS-fa {
+    background-position: -300% 0;
+    position: absolute
+}
+
+@media screen and (min-width: 601px) {
+    .SNS-fa {
+        top: 10px;
+        left: 200px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .SNS-fa {
+        top: 20px;
+        left: 110px
+    }
+}
+
+.SNS-li {
+    background-position: -200% 0;
+    position: absolute
+}
+
+@media screen and (min-width: 601px) {
+    .SNS-li {
+        top: 10px;
+        left: 330px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .SNS-li {
+        top: 20px;
+        left: 240px
+    }
+}
+
+@keyframes smoke {
+    0% {
+        background-position: 0 0
+    }
+    to {
+        background-position: 0 -800px
+    }
+}
+
+@keyframes car {
+    0% {
+        transform: translateX(0) translateY(0)
+    }
+    50% {
+        transform: translateX(0) translateY(1px)
+    }
+    to {
+        transform: translateX(0) translateY(0)
+    }
+}
+
+@keyframes snscar {
+    0% {
+        transform: translateX(-300%);
+        opacity: 0
+    }
+    20% {
+        transform: translateX(-300%);
+        opacity: 1
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1
+    }
+}
+
+@keyframes share {
+    0% {
+        transform: rotate(-180deg);
+        opacity: 0
+    }
+    to {
+        transform: rotate(0);
+        opacity: 1
+    }
+}
+
+.this-file {
+    content: "components/chuniSNS/style.scss"
+}
+
+.Sprite {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    background-image: url(./assets/chuniSprite/icon.png);
+    background-size: 500% 500%;
+    pointer-events: none
+}
+
+.Sprite.apple_off {
+    background-position: -100% 0
+}
+
+.Sprite.note_g1 {
+    background-position: 0 -100%
+}
+
+.Sprite.note_g2 {
+    background-position: -100% -100%
+}
+
+.Sprite.note_r1 {
+    background-position: 0 -200%
+}
+
+.Sprite.note_r2 {
+    background-position: -100% -200%
+}
+
+.Sprite.note_b1 {
+    background-position: 0 -300%
+}
+
+.this-file {
+    content: "components/chuniSprite/style.scss"
+}
+
+.chuniStep {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e64c4a;
+    box-shadow: inset 0 0 0 5px #e64c4a, inset 0 0 0 7px #fff;
+    border-radius: 100%;
+    color: #fff;
+    text-align: center;
+    font-weight: 700
+}
+
+@media screen and (min-width: 601px) {
+    .chuniStep {
+        width: 100px;
+        height: 100px;
+        margin-right: 20px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .chuniStep {
+        width: 90px;
+        height: 90px;
+        margin-right: 10px
+    }
+}
+
+.chuniStep-inner {
+    margin-top: -8px;
+    line-height: 2rem
+}
+
+.chuniStep-number {
+    display: block;
+    font-size: 40px;
+    color: #fff
+}
+
+@media screen and (max-width: 600px) {
+    .chuniStep-number {
+        margin-top: -6px
+    }
+}
+
+.StepBox {
+    display: flex;
+    align-items: center;
+    margin: 20px 0 10px
+}
+
+.this-file {
+    content: "components/chuniStep/style.scss"
+}
+
+.chuniSubtitle {
+    width: 100%;
+    text-align: center;
+    margin: 10px auto
+}
+
+.chuniSubtitle-inner {
+    display: inline-block;
+    min-width: 450px;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #0a99af;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 4px 2px rgba(0, 0, 0, .3);
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px
+}
+
+@media screen and (max-width: 600px) {
+    .chuniSubtitle-inner {
+        min-width: 50%;
+        padding: 5px 20px;
+        line-height: 1.3
+    }
+}
+
+.chuniSubtitle .IconStandard {
+    margin-right: 10px;
+    font-size: 0
+}
+
+.chuniSubtitle .IconStandard .elAsset {
+    height: 100%
+}
+
+@media screen and (min-width: 601px) {
+    .chuniSubtitle .IconStandard {
+        width: 150px
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .chuniSubtitle .IconStandard {
+        width: 110px
+    }
+}
+
+.this-file {
+    content: "components/chuniSubtitle/style.scss"
+}
+
+.TitleMain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px auto;
+    padding: 6px 0;
+    position: relative;
+    z-index: 0;
+    color: #fff
+}
+
+@media screen and (min-width: 601px) {
+    .TitleMain {
+        width: 667px;
+        height: 85px;
+        background-image: url(./assets/chuniTitleMain/titlemain.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 50%
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .TitleMain {
+        width: 394px;
+        height: 54px;
+        background-image: url(./assets/chuniTitleMain/sp_titlemain.png)
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .TitleMain, .TitleMain.large {
+        margin: 0 auto;
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: 50%
+    }
+
+    .TitleMain.large {
+        width: 400px;
+        height: 55px;
+        background-image: url(./assets/chuniTitleMain/sp_titlemain_l.png)
+    }
+}
+
+.TitleMain-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 0 45px 5px;
+    width: 100%;
+    height: 100%;
+    font-family: Noto Sans JP, sans-serif;
+    font-style: italic;
+    font-size: 25px;
+    white-space: nowrap;
+    text-align: center
+}
+
+@media screen and (max-width: 600px) {
+    .TitleMain-text {
+        width: 100%;
+        height: 100%;
+        font-size: 20px
+    }
+
+    .large .TitleMain-text {
+        height: 2.7em;
+        padding: 0 25px;
+        white-space: inherit;
+        line-height: 1.2;
+        font-size: 19px
+    }
+}
+
+.this-file {
+    content: "components/chuniTitleMain/style.scss"
+}
+
+.TwitterBox.player {
+    position: relative
+}
+
+@media screen and (min-width: 601px) {
+    .TwitterBox.player {
+        width: 1411px;
+        height: 810px;
+        background-image: url(./assets/chuniTwitter/twitter_bg.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        padding: 1em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .TwitterBox.player {
+        width: 390px;
+        height: 347.5px;
+        background-image: url(./assets/chuniTwitter/sp_twitter_bg.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin: 0 auto 50px
+    }
+}
+
+.player .TwitterBox-main {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    width: 600px;
+    height: 450px;
+    margin: auto;
+    background: #fff
+}
+
+@media screen and (max-width: 600px) {
+    .player .TwitterBox-main {
+        top: 0;
+        width: 330px;
+        height: 247.5px;
+        margin: 15px auto 0
+    }
+}
+
+.player .TwitterBox-main-inner .timeline1 {
+    width: 100%;
+    height: 450px;
+    overflow: scroll;
+    overflow-x: hidden
+}
+
+@media screen and (max-width: 600px) {
+    .player .TwitterBox-main-inner .timeline1 {
+        height: 250px
+    }
+}
+
+.player .TwitterBox-main-inner .timeline1::-webkit-scrollbar {
+    width: 15px;
+    background-color: #000;
+    opacity: .8
+}
+
+.player .TwitterBox-main-inner .timeline1::-webkit-scrollbar-thumb {
+    width: 15px;
+    background-color: #dee004;
+    opacity: .8
+}
+
+.player .TwitterBox-main-inner-bg {
+    width: 100%;
+    height: 100px;
+    margin: 20px auto;
+    text-align: center
+}
+
+@media screen and (max-width: 600px) {
+    .player .TwitterBox-main-inner-bg {
+        height: 69px;
+        margin: 12px 0 0
+    }
+}
+
+.TwitterBox.news {
+    width: 280px;
+    height: 800px;
+    text-align: center
+}
+
+.TwitterBox.news .timeline1 {
+    width: 260px;
+    height: 800px;
+    background: #fff;
+    padding: 10px;
+    margin: 10px auto;
+    overflow: hidden
+}
+
+.TwitterBox.news .el-twitter-timeline {
+    height: 452px;
+    overflow-X: hidden;
+    overflow-Y: scroll;
+    margin-bottom: 40px
+}
+
+.TwitterBox.news .el-twitter-timeline::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent
+}
+
+.TwitterBox.news .el-twitter-timeline::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    width: 5px;
+    background-color: transparent
+}
+
+@media screen and (max-width: 600px) {
+    .TwitterBox .el-twitter-timeline iframe {
+        width: 350px !important;
+        margin: 0 auto
+    }
+}
+
+.this-file {
+    content: "components/chuniTwitter/style.scss"
+}
+
+.chuniTwitterLink {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.news .chuniTwitterLink {
+    display: block
+}
+
+.news .chuniTwitterLink-item {
+    display: block;
+    width: 269.1px;
+    height: 103.5px;
+    margin: 0 auto;
+    padding-bottom: 0
+}
+
+.chuniTwitterLink-item {
+    display: inline-block;
+    width: 274px;
+    height: 84px;
+    margin: 5px 10px;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: transparent;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-size: 0
+}
+
+.chuniTwitterLink-item.chunithm {
+    background-image: url(./assets/chuniTwitterLink/chunithm_twicon.png?2021)
+}
+
+.chuniTwitterLink-item.gekichumai {
+    background-image: url(./assets/chuniTwitterLink/gekichumai_twicon.png?2021)
+}
+
+@media screen and (max-width: 600px) {
+    .chuniTwitterLink-item {
+        width: 1720px;
+        height: 57px;
+        padding-bottom: 20%;
+        margin: 0 5px
+    }
+
+    .chuniTwitterLink-item.chunithm {
+        background-image: url(./assets/chuniTwitterLink/sp/chunithm_twicon.png?2021)
+    }
+
+    .chuniTwitterLink-item.gekichumai {
+        background-image: url(./assets/chuniTwitterLink/sp/gekichumai_twicon.png?2021)
+    }
+}
+
+.chuniTwitterLink-item:hover {
+    filter: brightness(104%)
+}
+
+.chuniTwitterLink-item:active {
+    filter: brightness(94%);
+    transform: translateY(1px);
+    cursor: pointer
+}
+
+.this-file {
+    content: "components/chuniTwitterLink/style.scss"
+}
+
+@media screen and (min-width: 601px) {
+    [no-pc], [only-sp] {
+        display: none !important
+    }
+}
+
+@media screen and (max-width: 600px) {
+    [no-sp], [only-pc] {
+        display: none !important
+    }
+}
+
+.gtm {
+    display: none;
+    visibility: hidden;
+    width: 0;
+    height: 0
+}
+
+@media screen and (min-width: 601px) {
+    [mqd] {
+        font-family: pc
+    }
+}
+
+@media screen and (max-width: 600px) {
+    [mqd] {
+        font-family: sp
+    }
+}
+
+.Flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+@media screen and (max-width: 600px) {
+    .Flex {
+        display: block
+    }
+}
+
+.Flex-box {
+    text-align: center
+}
+
+.Flex-box p {
+    text-align: left;
+    padding: 2px
+}
+
+@media screen and (max-width: 600px) {
+    .Flex-box {
+        display: block
+    }
+}
+
+::selection {
+    color: #fff;
+    background: #741525
+}
+
+.elAsset {
+    width: auto
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #2b343b;
+    font-family: Arial, メイリオ, Meiryo, ＭＳ\ Ｐゴシック, Hiragino Kaku Gothic Pro, ヒラギノ角ゴ Pro W3, sans-serif
+}
+
+@media screen and (min-width: 601px) {
+    body {
+        min-width: 1000px
+    }
+}
+
+body::-webkit-scrollbar {
+    width: 15px;
+    background-color: #000;
+    opacity: .8
+}
+
+body::-webkit-scrollbar-thumb {
+    width: 15px;
+    background-color: #dee004;
+    opacity: .8
+}
+
+body::selection {
+    color: gold;
+    background: red
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        overflow-x: hidden
+    }
+}
+
+.FooterTop {
+    position: relative;
+    z-index: 50;
+    margin-top: 80px
+}
+
+@media screen and (max-width: 600px) {
+    .FooterTop {
+        width: 100vw
+    }
+}
+
+ul.Normal {
+    padding: .5em 1em 0
+}
+
+ol.Normal {
+    padding: .5em 1em 0 2em
+}
+
+dl.Normal dd, dl.Normal dt, ul.Normal li {
+    padding: .1em 1em
+}
+
+ol.Normal > li {
+    padding: .1em 0
+}
+
+ul.Chuni-disc {
+    padding: .1em 2em
+}
+
+ul.Chuni-disc > li {
+    list-style-type: disc;
+    padding: .1em 0
+}
+
+ul.Normal > li.Chuni-kome:before {
+    content: "※";
+    width: 1em
+}
+
+ul.Normal > li.Chuni-kome {
+    text-indent: -1em;
+    padding-left: 1em
+}
+
+ul.Normal > li.Chuni-warning:before {
+    content: "※";
+    width: 1em;
+    color: red
+}
+
+ul.Normal > li.Chuni-warning {
+    text-indent: -1em;
+    padding-left: 1em;
+    color: red
+}
+
+b {
+    font-weight: 700
+}
+
+.red {
+    color: red
+}
+
+.green {
+    color: #36b050
+}
+
+.gray {
+    color: #939393
+}
+
+.blue {
+    color: #36b0f0
+}
+
+.yellow {
+    color: #e0c339
+}
+
+.Khaki {
+    color: #435b2c
+}
+
+.violet {
+    color: #8d35cb
+}
+
+.pink {
+    color: #ec24d7
+}
+.CharacterCenter {
+    display: flex;
+    width: 100vw;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 100;
+    height: 400px;
+}
+.CharacterHolder {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 6em;
+}
+.PlayerHolder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.videoHolder {
+    width: 100%;
+    position: relative;
+    height: 100%;
+    z-index: -1;
+}
